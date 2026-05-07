@@ -79,6 +79,12 @@ def _completion_with_retry(client: OpenAI, label: str = "", **kwargs: Any) -> An
             done.set()
 
 
+def _is_reasoning_model(model_id: str) -> bool:
+    """OpenAI reasoning models (o1/o3/o4 series and gpt-5 family) only accept default temperature."""
+    mid = model_id.lower()
+    return mid.startswith(("o1", "o3", "o4", "gpt-5"))
+
+
 def _truncate(s: str | None, n: int = 120) -> str:
     if not s:
         return ""
@@ -106,8 +112,9 @@ class TaskResult:
     model: str
     success: bool
     steps: int
-    tool_calls_correct: int
-    tool_calls_total: int
+    tool_calls_correct: int     # positions matched against expected_calls
+    tool_calls_total: int       # all tool calls the model made (for cost/observability)
+    tool_calls_scored: int      # positions we graded (== len(expected_calls); 0 if un-scored)
     input_tokens: int
     output_tokens: int
     latency_s: float
@@ -159,15 +166,16 @@ def run_task(model: ModelConfig, task: Task, verbose: bool = True) -> TaskResult
         for step in range(task.max_steps):
             steps = step + 1
             log(f"step {steps} → calling LLM")
-            resp = _completion_with_retry(
-                client,
-                label=label,
+            kwargs: dict[str, Any] = dict(
                 model=model.model_id,
                 messages=messages,
                 tools=task.tools,
                 tool_choice="auto",
-                temperature=0.0,
             )
+            # OpenAI reasoning models (o-series, gpt-5*) reject custom temperature.
+            if not _is_reasoning_model(model.model_id):
+                kwargs["temperature"] = 0.0
+            resp = _completion_with_retry(client, label=label, **kwargs)
             usage = resp.usage
             in_tokens += usage.prompt_tokens
             out_tokens += usage.completion_tokens
@@ -243,9 +251,12 @@ def run_task(model: ModelConfig, task: Task, verbose: bool = True) -> TaskResult
         + out_tokens * model.output_price_per_1m / 1_000_000
     )
 
+    tc_scored = len(task.expected_calls or [])
+
     status = "PASS" if success else ("ERROR" if error else "FAIL")
+    scored_str = f"{tc_correct}/{tc_scored}" if tc_scored else "n/a"
     log(
-        f"DONE {status} steps={steps} tools={tc_correct}/{tc_total} "
+        f"DONE {status} steps={steps} tools_made={tc_total} scored={scored_str} "
         f"cost=${cost:.4f} t={latency:.1f}s"
     )
 
@@ -256,6 +267,7 @@ def run_task(model: ModelConfig, task: Task, verbose: bool = True) -> TaskResult
         steps=steps,
         tool_calls_correct=tc_correct,
         tool_calls_total=tc_total,
+        tool_calls_scored=tc_scored,
         input_tokens=in_tokens,
         output_tokens=out_tokens,
         latency_s=latency,
@@ -283,13 +295,16 @@ def summarize(results: list[TaskResult]) -> dict[str, dict[str, float]]:
         n = len(rs)
         successes = [r for r in rs if r.success]
         n_succ = len(successes)
-        total_calls = sum(r.tool_calls_total for r in rs)
+        # Tool accuracy is graded only against tasks that defined expected_calls.
+        scored_calls = sum(r.tool_calls_scored for r in rs)
         correct_calls = sum(r.tool_calls_correct for r in rs)
+        n_scored_tasks = sum(1 for r in rs if r.tool_calls_scored > 0)
 
         summary[name] = {
-            # Metric 1: tool-use accuracy
-            "tool_accuracy": correct_calls / total_calls if total_calls else 0.0,
-            # Metric 2: multi-step completion rate
+            # Metric 1: tool-use accuracy (over scored tasks only)
+            "tool_accuracy": correct_calls / scored_calls if scored_calls else None,
+            "n_scored_tasks": n_scored_tasks,
+            # Metric 2: multi-step completion rate (all tasks)
             "completion_rate": n_succ / n if n else 0.0,
             "avg_steps_on_success": (
                 sum(r.steps for r in successes) / n_succ if n_succ else 0.0

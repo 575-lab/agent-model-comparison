@@ -44,7 +44,7 @@ Each run prints per-task PASS/FAIL with steps/cost/latency, writes the full trac
 ```bash
 git clone https://github.com/ShishirPatil/gorilla
 # In src/main.py, swap SAMPLE_TASKS for:
-#   tasks = load_bfcl("gorilla/berkeley-function-call-leaderboard/data/BFCL_v3_simple.json", limit=100)
+#   tasks = load_bfcl("gorilla/berkeley-function-call-leaderboard/data/BFCL_v4_simple_python.json", limit=100)
 ```
 
 **GAIA** (multi-step completion):

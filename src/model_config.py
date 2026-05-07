@@ -1,9 +1,13 @@
 """
 Model configurations for evaluation.
 
-Models served via Doubleword's OpenAI-compatible inference API.
-Pricing is realtime tier (USD per 1M tokens) — see
-https://docs.doubleword.ai/inference-api/models for current rates.
+Models served via:
+  - Doubleword's OpenAI-compatible inference API (open-source models).
+  - OpenAI's official API (proprietary baselines).
+
+Pricing is realtime / standard tier (USD per 1M tokens).
+Doubleword: https://docs.doubleword.ai/inference-api/models
+OpenAI:     https://platform.openai.com/docs/pricing
 """
 
 from __future__ import annotations
@@ -14,11 +18,15 @@ from dotenv import load_dotenv
 
 from runner import ModelConfig
 
-
 load_dotenv()
 
-DOUBLEWORD_BASE_URL = os.environ.get("DOUBLEWORD_BASE_URL", "https://api.doubleword.ai/v1")
+DOUBLEWORD_BASE_URL = os.environ.get(
+    "DOUBLEWORD_BASE_URL", "https://api.doubleword.ai/v1"
+)
 DOUBLEWORD_API_KEY = os.environ.get("DOUBLEWORD_API_KEY", "YOUR_DOUBLEWORD_KEY")
+
+OPENAI_BASE_URL = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1")
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "YOUR_OPENAI_KEY")
 
 
 MODELS = [
@@ -76,6 +84,56 @@ MODELS = [
         api_key=DOUBLEWORD_API_KEY,
         model_id="zai-org/GLM-5.1-FP8",
         input_price_per_1m=1.40,
+        output_price_per_1m=4.40,
+    ),
+    # ---------- OpenAI proprietary baselines ----------
+    # Verify current prices at https://platform.openai.com/docs/pricing
+    ModelConfig(
+        name="gpt-5",
+        base_url=OPENAI_BASE_URL,
+        api_key=OPENAI_API_KEY,
+        model_id="gpt-5",
+        input_price_per_1m=1.25,
+        output_price_per_1m=10.00,
+    ),
+    ModelConfig(
+        name="gpt-5-mini",
+        base_url=OPENAI_BASE_URL,
+        api_key=OPENAI_API_KEY,
+        model_id="gpt-5-mini",
+        input_price_per_1m=0.25,
+        output_price_per_1m=2.00,
+    ),
+    ModelConfig(
+        name="gpt-5-nano",
+        base_url=OPENAI_BASE_URL,
+        api_key=OPENAI_API_KEY,
+        model_id="gpt-5-nano",
+        input_price_per_1m=0.05,
+        output_price_per_1m=0.40,
+    ),
+    ModelConfig(
+        name="gpt-4o",
+        base_url=OPENAI_BASE_URL,
+        api_key=OPENAI_API_KEY,
+        model_id="gpt-4o",
+        input_price_per_1m=2.50,
+        output_price_per_1m=10.00,
+    ),
+    ModelConfig(
+        name="gpt-4o-mini",
+        base_url=OPENAI_BASE_URL,
+        api_key=OPENAI_API_KEY,
+        model_id="gpt-4o-mini",
+        input_price_per_1m=0.15,
+        output_price_per_1m=0.60,
+    ),
+    ModelConfig(
+        name="o4-mini",
+        base_url=OPENAI_BASE_URL,
+        api_key=OPENAI_API_KEY,
+        model_id="o4-mini",
+        input_price_per_1m=1.10,
         output_price_per_1m=4.40,
     ),
 ]

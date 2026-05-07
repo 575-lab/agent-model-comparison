@@ -27,6 +27,3 @@ env/
 .idea/
 *.swp
 .DS_Store
-
-# Eval outputs
-results.json
