@@ -1,0 +1,5572 @@
+[
+  {
+    "task_id": "bfcl-simple_python_1",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 679,
+    "output_tokens": 177,
+    "latency_s": 8.978107929229736,
+    "cost_usd": 0.00179742,
+    "error": null,
+    "trace": [
+      {
+        "tool": "math.factorial",
+        "args": {
+          "number": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The factorial of 5 is **120**.\n\nHere's the calculation:  \n5! = 5 \u00d7 4 \u00d7 3 \u00d7 2 \u00d7 1 = **120**"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_2",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 870,
+    "output_tokens": 216,
+    "latency_s": 9.358241081237793,
+    "cost_usd": 0.00226548,
+    "error": null,
+    "trace": [
+      {
+        "tool": "math.hypot",
+        "args": {
+          "x": 4,
+          "y": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The hypotenuse of a right triangle with side lengths **4** and **5** is approximately **6.4031**.\n\nHere's the calculation:\n\n\\[\n\\sqrt{4^2 + 5^2} = \\sqrt{16 + 25} = \\sqrt{41} \\approx 6.403124237\n\\]"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_0",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 844,
+    "output_tokens": 293,
+    "latency_s": 10.829203844070435,
+    "cost_usd": 0.0024882000000000003,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_triangle_area",
+        "args": {
+          "base": 10,
+          "height": 5,
+          "unit": "units"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of a triangle is calculated using the formula:\n\n\\[\n\\text{Area} = \\frac{1}{2} \\times \\text{base} \\times \\text{height}\n\\]\n\nPlugging in the values:\n\n\\[\n\\text{Area} = \\frac{1}{2} \\times 10 \\times 5 = \\frac{50}{2} = 25 \\text{ square units}\n\\]\n\n**The area of the triangle is 25 square units.**"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_3",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 853,
+    "output_tokens": 533,
+    "latency_s": 16.35291028022766,
+    "cost_usd": 0.00333906,
+    "error": null,
+    "trace": [
+      {
+        "tool": "algebra.quadratic_roots",
+        "args": {
+          "a": 1,
+          "b": -3,
+          "c": 2
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The quadratic equation is:\n\n**x\u00b2 \u2212 3x + 2 = 0**\n\nUsing the quadratic formula:\n\n\\[\nx = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\n\\]\n\nWith \\(a = 1\\), \\(b = -3\\), \\(c = 2\\):\n\n- **Discriminant:** \\((-3)^2 - 4(1)(2) = 9 - 8 = 1\\)\n- **Roots:** \\(x = \\frac{3 \\pm \\sqrt{1}}{2} = \\frac{3 \\pm 1}{2}\\)\n\n\\[\nx_1 = \\frac{3 + 1}{2} = 2 \\quad \\text{and} \\quad x_2 = \\frac{3 - 1}{2} = 1\n\\]\n\n### \u2705 The roots are **x = 1** and **x = 2**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_4",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 830,
+    "output_tokens": 563,
+    "latency_s": 15.505688190460205,
+    "cost_usd": 0.00340344,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic_equation",
+        "args": {
+          "a": 2,
+          "b": 6,
+          "c": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The quadratic equation is **2x\u00b2 + 6x + 5 = 0**.\n\nUsing the quadratic formula:\n\n\\[\nx = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\n\\]\n\n**Step 1: Calculate the discriminant**\n\n\\[\nb^2 - 4ac = 6^2 - 4(2)(5) = 36 - 40 = -4\n\\]\n\nSince the discriminant is negative (\\(-4\\)), the equation has **two complex conjugate roots**.\n\n**Step 2: Solve for x**\n\n\\[\nx = \\frac{-6 \\pm \\sqrt{-4}}{2(2)} = \\frac{-6 \\pm 2i}{4} = \\frac{-3 \\pm i}{2}\n\\]\n\n### Final Answer:\n\n\\[\n\\boxed{x_1 = -\\frac{3}{2} + \\frac{1}{2}i \\quad \\text{and} \\quad x_2 = -\\frac{3}{2} - \\frac{1}{2}i}\n\\]\n\nOr in decimal form: \\(x = -1.5 \\pm 0.5i\\)"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_7",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 790,
+    "output_tokens": 260,
+    "latency_s": 8.131211996078491,
+    "cost_usd": 0.0022794,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_circumference",
+        "args": {
+          "radius": 4,
+          "unit": "inches"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The circumference of a circle is calculated using the formula:\n\n**C = 2\u03c0r**\n\nWith a radius of **4 inches**:\n\n**C = 2 \u00d7 \u03c0 \u00d7 4 = 8\u03c0 \u2248 25.13 inches**\n\nSo, the circumference is approximately **25.13 inches** (or exactly **8\u03c0 inches**)."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_6",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 830,
+    "output_tokens": 534,
+    "latency_s": 14.393938064575195,
+    "cost_usd": 0.0033025199999999998,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic",
+        "args": {
+          "a": 2,
+          "b": 5,
+          "c": 3
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The roots of the quadratic equation **2x\u00b2 + 5x + 3 = 0** are:\n\n- **x = -1**\n- **x = -1.5** (or -3/2)\n\nHere's the work using the quadratic formula:\n\n$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$\n\n- Discriminant: \\(b^2 - 4ac = 25 - 4(2)(3) = 25 - 24 = 1\\)\n- \\(x = \\frac{-5 \\pm \\sqrt{1}}{4} = \\frac{-5 \\pm 1}{4}\\)\n\nSo:\n- \\(x_1 = \\frac{-5 + 1}{4} = \\frac{-4}{4} = -1\\)\n- \\(x_2 = \\frac{-5 - 1}{4} = \\frac{-6}{4} = -\\frac{3}{2} = -1.5\\)"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_5",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 1051,
+    "output_tokens": 762,
+    "latency_s": 21.769577980041504,
+    "cost_usd": 0.0044805,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic",
+        "args": {
+          "a": 3,
+          "b": -11,
+          "c": -4,
+          "root_type": "all"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The tool confirmed the operation. Let me present the results:\n\n## Quadratic Equation: \\(3x^2 - 11x - 4 = 0\\)\n\nUsing the quadratic formula \\(x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\\) with \\(a = 3\\), \\(b = -11\\), \\(c = -4\\):\n\n**Discriminant:** \\(b^2 - 4ac = (-11)^2 - 4(3)(-4) = 121 + 48 = 169\\)\n\nSince the discriminant is positive (169), both roots are **real and distinct**.\n\n### Roots:\n\n\\[\nx = \\frac{11 \\pm \\sqrt{169}}{6} = \\frac{11 \\pm 13}{6}\n\\]\n\n| Root | Value |\n|------|-------|\n| \\(x_1\\) | \\(\\frac{11 + 13}{6} = \\frac{24}{6} = \\mathbf{4}\\) |\n| \\(x_2\\) | \\(\\frac{11 - 13}{6} = \\frac{-2}{6} = \\mathbf{-\\frac{1}{3}}\\) |\n\n### Verification:\n- For \\(x = 4\\): \\(3(16) - 11(4) - 4 = 48 - 44 - 4 = 0\\) \u2713\n- For \\(x = -\\frac{1}{3}\\): \\(3(\\frac{1}{9}) - 11(-\\frac{1}{3}) - 4 = \\frac{1}{3} + \\frac{11}{3} - 4 = 4 - 4 = 0\\) \u2713\n\n**All roots:** \\(x = 4\\) and \\(x = -\\frac{1}{3}\\)"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_8",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 763,
+    "output_tokens": 215,
+    "latency_s": 7.301218748092651,
+    "cost_usd": 0.00207582,
+    "error": null,
+    "trace": [
+      {
+        "tool": "geometry.area_circle",
+        "args": {
+          "radius": 10
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of a circle with a radius of 10 meters is approximately **314.16 square meters** (\u03c0 \u00d7 10\u00b2 = 100\u03c0 \u2248 314.16 m\u00b2)."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_9",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 789,
+    "output_tokens": 256,
+    "latency_s": 8.14683485031128,
+    "cost_usd": 0.0022637399999999998,
+    "error": null,
+    "trace": [
+      {
+        "tool": "geometry.calculate_area_circle",
+        "args": {
+          "radius": 5,
+          "unit": "units"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of a circle is calculated using the formula:\n\n**Area = \u03c0 \u00d7 r\u00b2**\n\nWith a radius of **5 units**:\n\n**Area = \u03c0 \u00d7 5\u00b2 = \u03c0 \u00d7 25 \u2248 78.54 square units**\n\nSo, the area of the circle is approximately **78.54 square units** (or exactly **25\u03c0 square units**)."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_10",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 875,
+    "output_tokens": 263,
+    "latency_s": 9.424808025360107,
+    "cost_usd": 0.00243774,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_area",
+        "args": {
+          "base": 6,
+          "height": 10,
+          "unit": "cm"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of the right-angled triangle is **30 cm\u00b2**.\n\nHere's the calculation:\n\n\\[\n\\text{Area} = \\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 6 \\, \\text{cm} \\times 10 \\, \\text{cm} = 30 \\, \\text{cm}^2\n\\]"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_11",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 782,
+    "output_tokens": 249,
+    "latency_s": 7.991675853729248,
+    "cost_usd": 0.0022272,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_triangle_area",
+        "args": {
+          "base": 10,
+          "height": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of the triangle is **25 square units**.\n\nThe formula for the area of a triangle is:\n\n\\[\n\\text{Area} = \\frac{1}{2} \\times \\text{base} \\times \\text{height}\n\\]\n\nPlugging in the values:\n\n\\[\n\\text{Area} = \\frac{1}{2} \\times 10 \\times 5 = \\frac{50}{2} = 25\n\\]"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_12",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 744,
+    "output_tokens": 250,
+    "latency_s": 7.783969879150391,
+    "cost_usd": 0.00216456,
+    "error": null,
+    "trace": [
+      {
+        "tool": "geometry.circumference",
+        "args": {
+          "radius": 3
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The circumference of a circle is calculated using the formula:\n\n**C = 2\u03c0r**\n\nWith a radius of **3**:\n\n**C = 2 \u00d7 \u03c0 \u00d7 3 = 6\u03c0 \u2248 18.85 cm**\n\nSo the circumference is approximately **18.85 cm** (or exactly **6\u03c0 cm**)."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_13",
+    "model": "deepseek-v4-pro",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 910,
+    "output_tokens": 407,
+    "latency_s": 10.460086107254028,
+    "cost_usd": 0.0029997599999999998,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_area_under_curve",
+        "args": {
+          "function": "x^2",
+          "interval": [
+            1,
+            3
+          ]
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area under the curve \\(y = x^2\\) from \\(x = 1\\) to \\(x = 3\\) is calculated using the definite integral:\n\n\\[\n\\int_{1}^{3} x^2 \\, dx = \\left[ \\frac{x^3}{3} \\right]_{1}^{3} = \\frac{3^3}{3} - \\frac{1^3}{3} = \\frac{27}{3} - \\frac{1}{3} = 9 - \\frac{1}{3} = \\frac{26}{3} \\approx 8.667\n\\]\n\n**Result:** \\(\\frac{26}{3}\\) (approximately **8.667** square units)."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_14",
+    "model": "deepseek-v4-pro",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 776,
+    "output_tokens": 379,
+    "latency_s": 10.799851894378662,
+    "cost_usd": 0.0026691600000000003,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_derivative",
+        "args": {
+          "function": "3x^2 + 2x - 1"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The derivative of the function \\( f(x) = 3x^2 + 2x - 1 \\) is:\n\n\\[\nf'(x) = 6x + 2\n\\]\n\nHere's the step-by-step breakdown using the **power rule** \\(\\frac{d}{dx}[x^n] = nx^{n-1}\\):\n\n- **\\(3x^2\\)**: \\(3 \\cdot 2x^{2-1} = 6x\\)\n- **\\(2x\\)**: \\(2 \\cdot 1x^{1-1} = 2\\)\n- **\\(-1\\)**: The derivative of a constant is \\(0\\)\n\nAdding them together gives the final result: **\\(6x + 2\\)**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_16",
+    "model": "deepseek-v4-pro",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 870,
+    "output_tokens": 281,
+    "latency_s": 8.662045955657959,
+    "cost_usd": 0.00249168,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculus.derivative",
+        "args": {
+          "function": "2x^2",
+          "function_variable": "x",
+          "value": 1
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The derivative of \\( f(x) = 2x^2 \\) is:\n\n\\[\nf'(x) = 4x\n\\]\n\nEvaluating at \\( x = 1 \\):\n\n\\[\nf'(1) = 4 \\cdot 1 = 4\n\\]\n\nSo the derivative of \\( 2x^2 \\) at \\( x = 1 \\) is **4**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_19",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 750,
+    "output_tokens": 227,
+    "latency_s": 7.254806995391846,
+    "cost_usd": 0.00209496,
+    "error": null,
+    "trace": [
+      {
+        "tool": "math.gcd",
+        "args": {
+          "num1": 40,
+          "num2": 50
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The greatest common divisor (GCD) of **40** and **50** is **10**.\n\nHere's a quick breakdown:\n\n- Factors of 40: 1, 2, 4, 5, 8, **10**, 20, 40\n- Factors of 50: 1, 2, 5, **10**, 25, 50\n\nThe largest number that divides both 40 and 50 evenly is **10**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_17",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 1,
+    "input_tokens": 1288,
+    "output_tokens": 396,
+    "latency_s": 12.813902854919434,
+    "cost_usd": 0.0036192,
+    "error": null,
+    "trace": [
+      {
+        "tool": "get_prime_factors",
+        "args": {
+          "number": 450,
+          "formatted": true
+        },
+        "result": "ok"
+      },
+      {
+        "tool": "get_prime_factors",
+        "args": {
+          "formatted": false,
+          "number": 450
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The prime factorization of **450** is:\n\n**450 = 2 \u00d7 3\u00b2 \u00d7 5\u00b2**\n\nHere's the step-by-step breakdown:\n\n- 450 \u00f7 **2** = 225\n- 225 \u00f7 **3** = 75\n- 75 \u00f7 **3** = 25\n- 25 \u00f7 **5** = 5\n- 5 \u00f7 **5** = 1\n\nSo the prime factors are **2**, **3** (appearing twice), and **5** (appearing twice)."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_18",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 685,
+    "output_tokens": 579,
+    "latency_s": 15.480347871780396,
+    "cost_usd": 0.00320682,
+    "error": null,
+    "trace": [
+      {
+        "tool": "number_analysis.prime_factors",
+        "args": {
+          "number": 123456
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The prime factorization of **123456** is:\n\n**123456 = 2\u2076 \u00d7 3 \u00d7 643**\n\nHere's the step-by-step breakdown:\n\n1. Repeatedly divide by **2** (the smallest prime):\n   - 123456 \u00f7 2 = 61728\n   - 61728 \u00f7 2 = 30864\n   - 30864 \u00f7 2 = 15432\n   - 15432 \u00f7 2 = 7716\n   - 7716 \u00f7 2 = 3858\n   - 3858 \u00f7 2 = 1929\n   - So we have **2\u2076** so far.\n\n2. Divide 1929 by **3**:\n   - 1929 \u00f7 3 = 643\n   - So we also have a factor of **3**.\n\n3. **643** is a prime number (not divisible by any prime up to \u221a643 \u2248 25), so that's our final factor.\n\nThus, the prime factors are **2, 3, and 643**, with 2 appearing six times."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_0",
+    "model": "kimi-k2.6",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 283,
+    "output_tokens": 284,
+    "latency_s": 40.79857778549194,
+    "cost_usd": 0.00140485,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_triangle_area",
+        "args": {
+          "base": 10,
+          "height": 5,
+          "unit": "units"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": " The area of the triangle is **25 square units**.\n\nThis is calculated using the formula:  \n**Area = (base \u00d7 height) / 2**  \nArea = (10 \u00d7 5) / 2 = 50 / 2 = **25 square units**"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_1",
+    "model": "kimi-k2.6",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 190,
+    "output_tokens": 380,
+    "latency_s": 40.93680119514465,
+    "cost_usd": 0.0017005000000000002,
+    "error": null,
+    "trace": [
+      {
+        "tool": "factorial",
+        "args": {
+          "number": 5
+        },
+        "result": "ERROR: unknown tool 'factorial'"
+      },
+      {
+        "role": "assistant",
+        "content": " I encountered an error with the math function tool. However, I can calculate it directly for you:\n\n**5! = 120**\n\nHere's the breakdown:\n- 5 \u00d7 4 = 20\n- 20 \u00d7 3 = 60\n- 60 \u00d7 2 = 120\n- 120 \u00d7 1 = 120"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_2",
+    "model": "kimi-k2.6",
+    "success": false,
+    "steps": 3,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 1,
+    "input_tokens": 588,
+    "output_tokens": 589,
+    "latency_s": 49.70036196708679,
+    "cost_usd": 0.0029146,
+    "error": null,
+    "trace": [
+      {
+        "tool": "hypot",
+        "args": {
+          "x": 4,
+          "y": 5
+        },
+        "result": "ERROR: unknown tool 'hypot'"
+      },
+      {
+        "tool": "hypot",
+        "args": {
+          "x": 4,
+          "y": 5
+        },
+        "result": "ERROR: unknown tool 'hypot'"
+      },
+      {
+        "role": "assistant",
+        "content": " I apologize for the technical issue with the calculation tool. Let me calculate this manually for you:\n\nFor a right triangle with legs of length 4 and 5, the hypotenuse is calculated using the Pythagorean theorem:\n\n**c = \u221a(a\u00b2 + b\u00b2)**\n\nc = \u221a(4\u00b2 + 5\u00b2)\nc = \u221a(16 + 25)\nc = **\u221a41**\nc \u2248 **6.403**\n\nThe exact length of the hypotenuse is **\u221a41**, which is approximately **6.403** units."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_15",
+    "model": "deepseek-v4-pro",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 1005,
+    "output_tokens": 742,
+    "latency_s": 102.3136568069458,
+    "cost_usd": 0.00433086,
+    "error": null,
+    "trace": [
+      {
+        "tool": "integrate",
+        "args": {
+          "function": "x^3",
+          "start_x": -2,
+          "end_x": 3,
+          "method": "simpson"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area under the curve \\(y = x^3\\) from \\(x = -2\\) to \\(x = 3\\) is:\n\n\\[\n\\int_{-2}^{3} x^3 \\, dx = \\left[ \\frac{x^4}{4} \\right]_{-2}^{3} = \\frac{3^4}{4} - \\frac{(-2)^4}{4} = \\frac{81}{4} - \\frac{16}{4} = \\frac{65}{4} = \\mathbf{16.25}\n\\]\n\n### Why Simpson's Rule Gives the Exact Result\n\nSimpson's rule is **exact for polynomials of degree 3 or less**. Since \\(y = x^3\\) is a cubic polynomial, Simpson's method will return the exact value of **16.25** regardless of the number of intervals used (as long as the number of subintervals is even). This is a well-known property of Simpson's rule \u2014 it integrates cubics perfectly because the error term involves the fourth derivative, which is zero for \\(x^3\\)."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_4",
+    "model": "kimi-k2.6",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 269,
+    "output_tokens": 401,
+    "latency_s": 63.38325905799866,
+    "cost_usd": 0.00185955,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic_equation",
+        "args": {
+          "a": 2,
+          "b": 6,
+          "c": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": " The quadratic equation is **2x\u00b2 + 6x + 5 = 0**.\n\nUsing the quadratic formula, I calculate:\n\n**Discriminant:** b\u00b2 - 4ac = 36 - 40 = **-4**\n\nSince the discriminant is negative, this equation has two complex (imaginary) roots:\n\n**x = (-3 + i) / 2**  and  **x = (-3 - i) / 2**\n\nOr in decimal form:\n- **x \u2248 -1.5 + 0.5i**\n- **x \u2248 -1.5 - 0.5i**"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_3",
+    "model": "kimi-k2.6",
+    "success": false,
+    "steps": 3,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 1,
+    "input_tokens": 582,
+    "output_tokens": 848,
+    "latency_s": 65.86780095100403,
+    "cost_usd": 0.0039449,
+    "error": null,
+    "trace": [
+      {
+        "tool": "quadratic_roots",
+        "args": {
+          "a": 1,
+          "b": -3,
+          "c": 2
+        },
+        "result": "ERROR: unknown tool 'quadratic_roots'"
+      },
+      {
+        "tool": "quadratic_roots",
+        "args": {
+          "a": 1,
+          "b": -3,
+          "c": 2
+        },
+        "result": "ERROR: unknown tool 'quadratic_roots'"
+      },
+      {
+        "role": "assistant",
+        "content": " I apologize for the technical issue with the tool. Let me solve this manually using the quadratic formula.\n\nFor the quadratic equation **x\u00b2 - 3x + 2 = 0** (where a=1, b=-3, c=2):\n\nUsing the quadratic formula: x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / 2a\n\n**Step 1:** Calculate the discriminant\n- D = b\u00b2 - 4ac = (-3)\u00b2 - 4(1)(2) = 9 - 8 = **1**\n\n**Step 2:** Find the roots\n- x = (3 \u00b1 \u221a1) / 2\n- x = (3 \u00b1 1) / 2\n\n**Root 1:** x = (3 + 1) / 2 = **2**\n**Root 2:** x = (3 - 1) / 2 = **1**\n\nThe roots of the equation x\u00b2 - 3x + 2 = 0 are **x = 2** and **x = 1**.\n\nYou can verify this by factoring: (x - 2)(x - 1) = x\u00b2 - 3x + 2 \u2713"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_5",
+    "model": "kimi-k2.6",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 444,
+    "output_tokens": 579,
+    "latency_s": 53.43994998931885,
+    "cost_usd": 0.0027378,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic",
+        "args": {
+          "a": 3,
+          "b": -11,
+          "c": -4,
+          "root_type": "all"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": " The roots of the quadratic equation $3x^2 - 11x - 4 = 0$ are:\n\n$$x = 4 \\quad \\text{and} \\quad x = -\\frac{1}{3}$$\n\n**Calculation using the quadratic formula:**\n\n$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$\n\nWith $a = 3$, $b = -11$, and $c = -4$:\n\n- **Discriminant:** $\\Delta = (-11)^2 - 4(3)(-4) = 121 + 48 = 169$\n- **Square root:** $\\sqrt{169} = 13$\n\n$$x = \\frac{11 \\pm 13}{6}$$\n\nThis gives us:\n- $x_1 = \\frac{11 + 13}{6} = \\frac{24}{6} = 4$\n- $x_2 = \\frac{11 - 13}{6} = \\frac{-2}{6} = -\\frac{1}{3}$"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_7",
+    "model": "kimi-k2.6",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 250,
+    "output_tokens": 272,
+    "latency_s": 6.988246917724609,
+    "cost_usd": 0.0013255,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_circumference",
+        "args": {
+          "radius": 4,
+          "unit": "inches"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": " The circumference of a circle with a radius of 4 inches is **8\u03c0 inches** (or approximately **25.13 inches**).\n\nThis is calculated using the formula C = 2\u03c0r, where:\n- C = circumference\n- \u03c0 \u2248 3.14159\n- r = 4 inches\n\nSo: C = 2 \u00d7 \u03c0 \u00d7 4 = 8\u03c0 \u2248 25.13 inches"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_10",
+    "model": "kimi-k2.6",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 315,
+    "output_tokens": 262,
+    "latency_s": 7.417946100234985,
+    "cost_usd": 0.0013472500000000001,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_area",
+        "args": {
+          "base": 6,
+          "height": 10,
+          "unit": "cm"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": " The area of the right-angled triangle with a base of 6 cm and a height of 10 cm is:\n\n**30 cm\u00b2**\n\n(Calculated using the formula: \u00bd \u00d7 base \u00d7 height = \u00bd \u00d7 6 \u00d7 10 = 30 cm\u00b2)"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_8",
+    "model": "kimi-k2.6",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 236,
+    "output_tokens": 384,
+    "latency_s": 15.588924884796143,
+    "cost_usd": 0.0017602,
+    "error": null,
+    "trace": [
+      {
+        "tool": "area_circle",
+        "args": {
+          "radius": 10
+        },
+        "result": "ERROR: unknown tool 'area_circle'"
+      },
+      {
+        "role": "assistant",
+        "content": " The area of a circle with a radius of 10 is **100\u03c0** (or approximately **314.16** square units).\n\nThis is calculated using the formula A = \u03c0r\u00b2, where r = 10:\n- A = \u03c0 \u00d7 10\u00b2\n- A = \u03c0 \u00d7 100\n- A = 100\u03c0 \u2248 314.16"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_9",
+    "model": "kimi-k2.6",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 243,
+    "output_tokens": 393,
+    "latency_s": 15.085181951522827,
+    "cost_usd": 0.00180285,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_area_circle",
+        "args": {
+          "radius": 5
+        },
+        "result": "ERROR: unknown tool 'calculate_area_circle'"
+      },
+      {
+        "role": "assistant",
+        "content": " I apologize, but the calculation tool is currently unavailable. However, I can calculate the area manually for you.\n\nThe formula for the area of a circle is:\n**A = \u03c0r\u00b2**\n\nGiven a radius of 5 units:\n- A = \u03c0 \u00d7 (5)\u00b2\n- A = \u03c0 \u00d7 25\n- A = **25\u03c0 square units**\n- A \u2248 **78.54 square units** (using \u03c0 \u2248 3.14159)\n\nSo the area of the circle is approximately **78.54 square units**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_11",
+    "model": "kimi-k2.6",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 247,
+    "output_tokens": 276,
+    "latency_s": 8.83170485496521,
+    "cost_usd": 0.0013386499999999998,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_triangle_area",
+        "args": {
+          "base": 10,
+          "height": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": " The area of a triangle with a base of 10 units and a height of 5 units is **25 square units**.\n\nThis is calculated using the formula:  \n**Area = (base \u00d7 height) / 2**  \nArea = (10 \u00d7 5) / 2 = 50 / 2 = **25**"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_12",
+    "model": "kimi-k2.6",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 233,
+    "output_tokens": 396,
+    "latency_s": 12.41330885887146,
+    "cost_usd": 0.0018053499999999998,
+    "error": null,
+    "trace": [
+      {
+        "tool": "circumference",
+        "args": {
+          "radius": 3
+        },
+        "result": "ERROR: unknown tool 'circumference'"
+      },
+      {
+        "role": "assistant",
+        "content": " I encountered a technical issue with the tool, but I can calculate this for you directly.\n\nThe formula for the circumference of a circle is:\n**C = 2\u03c0r**\n\nGiven radius **r = 3**:\n**C = 2 \u00d7 \u03c0 \u00d7 3 = 6\u03c0 \u2248 18.85 cm**\n\nSo the circumference is **6\u03c0 cm** (or approximately **18.85 cm**)."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_6",
+    "model": "kimi-k2.6",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 265,
+    "output_tokens": 590,
+    "latency_s": 52.46692609786987,
+    "cost_usd": 0.0026117500000000004,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic",
+        "args": {
+          "a": 2,
+          "b": 5,
+          "c": 3
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": " The roots of the quadratic equation **2x\u00b2 + 5x + 3 = 0** are:\n\n**x = -1** and **x = -3/2** (or **-1.5**)\n\nHere's the calculation using the quadratic formula:\n\n- Discriminant: b\u00b2 - 4ac = 25 - 24 = **1**\n- x = (-5 \u00b1 \u221a1) / 4\n- x = (-5 \u00b1 1) / 4\n\nThis gives:\n- x\u2081 = (-5 + 1) / 4 = **-1**\n- x\u2082 = (-5 - 1) / 4 = **-6/4 = -3/2**"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_14",
+    "model": "kimi-k2.6",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 253,
+    "output_tokens": 403,
+    "latency_s": 19.58092999458313,
+    "cost_usd": 0.00185235,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_derivative",
+        "args": {
+          "function": "3x^2 + 2x - 1"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": " The derivative of the function **3x\u00b2 + 2x - 1** is:\n\n**6x + 2**\n\nHere's the breakdown using the power rule:\n- Derivative of 3x\u00b2 \u2192 6x\n- Derivative of 2x \u2192 2\n- Derivative of -1 \u2192 0\n\nSo: **d/dx(3x\u00b2 + 2x - 1) = 6x + 2**"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_13",
+    "model": "kimi-k2.6",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 356,
+    "output_tokens": 486,
+    "latency_s": 30.97492003440857,
+    "cost_usd": 0.0022822,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_area_under_curve",
+        "args": {
+          "function": "x^2",
+          "interval": [
+            1,
+            3
+          ]
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": " The area under the curve **y = x\u00b2** from **x = 1** to **x = 3** is:\n\n**26/3 \u2248 8.667** square units\n\nThis can be calculated using definite integration:\n$$\\int_1^3 x^2 \\, dx = \\left[\\frac{x^3}{3}\\right]_1^3 = \\frac{27}{3} - \\frac{1}{3} = \\frac{26}{3} \\approx 8.667$$"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_16",
+    "model": "kimi-k2.6",
+    "success": false,
+    "steps": 3,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 1,
+    "input_tokens": 567,
+    "output_tokens": 598,
+    "latency_s": 22.05720806121826,
+    "cost_usd": 0.00293065,
+    "error": null,
+    "trace": [
+      {
+        "tool": "derivative",
+        "args": {
+          "function": "2x^2",
+          "value": 1,
+          "function_variable": "x"
+        },
+        "result": "ERROR: unknown tool 'derivative'"
+      },
+      {
+        "tool": "derivative",
+        "args": {
+          "function": "2x^2",
+          "value": 1,
+          "function_variable": "x"
+        },
+        "result": "ERROR: unknown tool 'derivative'"
+      },
+      {
+        "role": "assistant",
+        "content": " I apologize, but the derivative tool appears to be unavailable at the moment. However, I can calculate this for you manually:\n\n**Function:** f(x) = 2x\u00b2\n\n**Step 1:** Apply the power rule for differentiation\n- The power rule states that d/dx(x\u207f) = nx\u207f\u207b\u00b9\n- f'(x) = d/dx(2x\u00b2) = 2 \u00b7 2x\u00b9 = **4x**\n\n**Step 2:** Evaluate at x = 1\n- f'(1) = 4(1) = **4**\n\n**Answer:** The derivative of 2x\u00b2 at x = 1 is **4**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_19",
+    "model": "kimi-k2.6",
+    "success": false,
+    "steps": 3,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 1,
+    "input_tokens": 402,
+    "output_tokens": 581,
+    "latency_s": 11.111624240875244,
+    "cost_usd": 0.0027059000000000002,
+    "error": null,
+    "trace": [
+      {
+        "tool": "gcd",
+        "args": {
+          "num1": 40,
+          "num2": 50
+        },
+        "result": "ERROR: unknown tool 'gcd'"
+      },
+      {
+        "tool": "gcd",
+        "args": {
+          "num1": 40,
+          "num2": 50
+        },
+        "result": "ERROR: unknown tool 'gcd'"
+      },
+      {
+        "role": "assistant",
+        "content": " I apologize, but the GCD tool appears to be experiencing an error. However, I can calculate it manually for you.\n\nThe greatest common divisor of **40 and 50 is 10**.\n\nHere's how we can verify this:\n\n**Using prime factorization:**\n- 40 = 2\u00b3 \u00d7 5\n- 50 = 2 \u00d7 5\u00b2\n- Common factors: 2 \u00d7 5 = **10**\n\n**Using the Euclidean algorithm:**\n- 50 = 40 \u00d7 1 + 10\n- 40 = 10 \u00d7 4 + 0\n- When the remainder reaches 0, the divisor is the GCD: **10**"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_18",
+    "model": "kimi-k2.6",
+    "success": false,
+    "steps": 4,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 4,
+    "tool_calls_scored": 1,
+    "input_tokens": 594,
+    "output_tokens": 468,
+    "latency_s": 19.149370908737183,
+    "cost_usd": 0.0024362999999999998,
+    "error": null,
+    "trace": [
+      {
+        "tool": "prime_factors",
+        "args": {
+          "number": 123456
+        },
+        "result": "ERROR: unknown tool 'prime_factors'"
+      },
+      {
+        "tool": "prime_factors",
+        "args": {
+          "number": 123456
+        },
+        "result": "ERROR: unknown tool 'prime_factors'"
+      },
+      {
+        "tool": "prime_factors",
+        "args": {
+          "number": 123456
+        },
+        "result": "ERROR: unknown tool 'prime_factors'"
+      },
+      {
+        "tool": "prime_factors",
+        "args": {
+          "number": 123456
+        },
+        "result": "ERROR: unknown tool 'prime_factors'"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_0",
+    "model": "gemma-4-31b-it",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 333,
+    "output_tokens": 52,
+    "latency_s": 5.741879940032959,
+    "cost_usd": 6.742e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_triangle_area",
+        "args": {
+          "base": 10,
+          "height": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of a triangle with a base of 10 units and a height of 5 units is 25 square units."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_1",
+    "model": "gemma-4-31b-it",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 199,
+    "output_tokens": 25,
+    "latency_s": 5.874428987503052,
+    "cost_usd": 3.786000000000001e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "math.factorial",
+        "args": {
+          "number": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The factorial of 5 is 120."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_2",
+    "model": "gemma-4-31b-it",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 382,
+    "output_tokens": 47,
+    "latency_s": 3.410950183868408,
+    "cost_usd": 7.228e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "math.hypot",
+        "args": {
+          "x": 4,
+          "y": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The hypotenuse of a right triangle with sides of 4 and 5 is approximately 6.40."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_15",
+    "model": "kimi-k2.6",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 404,
+    "output_tokens": 807,
+    "latency_s": 47.044830083847046,
+    "cost_usd": 0.0036118,
+    "error": null,
+    "trace": [
+      {
+        "tool": "integrate",
+        "args": {
+          "function": "x^3",
+          "start_x": -2,
+          "end_x": 3,
+          "method": "simpson"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": " The function call was processed, but it appears the numerical result wasn't returned in the output. However, I can calculate this for you directly:\n\nFor the function **y = x\u00b3** from **x = -2** to **x = 3**:\n\nUsing the exact integration (which Simpson's method will match for cubic functions):\n$$\\int_{-2}^{3} x^3 \\, dx = \\left[\\frac{x^4}{4}\\right]_{-2}^{3} = \\frac{81}{4} - \\frac{16}{4} = \\frac{65}{4}$$\n\n**The area under the curve is 16.25** (or **65/4**).\n\n**Note:** Simpson's rule is exact for polynomials up to degree 3, so the numerical result using Simpson's method will equal the exact analytical answer of **16.25**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_3",
+    "model": "gemma-4-31b-it",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 148,
+    "output_tokens": 23,
+    "latency_s": 2.718255043029785,
+    "cost_usd": 2.9920000000000005e-05,
+    "error": "AttributeError: 'NoneType' object has no attribute 'prompt_tokens'",
+    "trace": [
+      {
+        "tool": "algebra.quadratic_roots",
+        "args": {},
+        "result": "ok"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_6",
+    "model": "gemma-4-31b-it",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 306,
+    "output_tokens": 59,
+    "latency_s": 3.6842682361602783,
+    "cost_usd": 6.644000000000001e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic",
+        "args": {
+          "a": 2,
+          "b": 5,
+          "c": 3
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The roots of the quadratic equation with $a=2$, $b=5$, and $c=3$ are $-1$ and $-0.5$."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_5",
+    "model": "gemma-4-31b-it",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 515,
+    "output_tokens": 79,
+    "latency_s": 5.173262119293213,
+    "cost_usd": 0.0001037,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic",
+        "args": {
+          "a": 3,
+          "b": -11,
+          "c": -4,
+          "root_type": "all"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The roots of the quadratic equation with coefficients $a = 3$, $b = -11$, and $c = -4$ are $x = 4$ and $x = -1/3$."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_7",
+    "model": "gemma-4-31b-it",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 278,
+    "output_tokens": 47,
+    "latency_s": 3.3357057571411133,
+    "cost_usd": 5.7719999999999996e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_circumference",
+        "args": {
+          "radius": 4,
+          "unit": "inches"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The circumference of a circle with a radius of 4 inches is approximately 25.13 inches."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_4",
+    "model": "gemma-4-31b-it",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 307,
+    "output_tokens": 63,
+    "latency_s": 9.018412113189697,
+    "cost_usd": 6.818000000000001e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic_equation",
+        "args": {
+          "a": 2,
+          "b": 6,
+          "c": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The roots of the quadratic equation with $a=2$, $b=6$, and $c=5$ are $x = -1$ and $x = -2.5$."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_9",
+    "model": "gemma-4-31b-it",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 271,
+    "output_tokens": 41,
+    "latency_s": 3.396336317062378,
+    "cost_usd": 5.434000000000001e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "geometry.calculate_area_circle",
+        "args": {
+          "radius": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of a circle with a radius of 5 units is approximately 78.54 square units."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_11",
+    "model": "gemma-4-31b-it",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 290,
+    "output_tokens": 48,
+    "latency_s": 2.9930570125579834,
+    "cost_usd": 5.9800000000000003e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_triangle_area",
+        "args": {
+          "base": 10,
+          "height": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of a triangle with a base of 10 units and a height of 5 units is 25 square units."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_8",
+    "model": "gemma-4-31b-it",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 269,
+    "output_tokens": 45,
+    "latency_s": 9.304131031036377,
+    "cost_usd": 5.5660000000000006e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "geometry.area_circle",
+        "args": {
+          "radius": 10
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of a circle with a radius of 10 is approximately 314.16 square units."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_12",
+    "model": "gemma-4-31b-it",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 248,
+    "output_tokens": 40,
+    "latency_s": 2.775480031967163,
+    "cost_usd": 5.072e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "geometry.circumference",
+        "args": {
+          "radius": 3
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The circumference of a circle with a radius of 3 is approximately 18.85 cm."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_13",
+    "model": "gemma-4-31b-it",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 404,
+    "output_tokens": 64,
+    "latency_s": 4.378326654434204,
+    "cost_usd": 8.216e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_area_under_curve",
+        "args": {
+          "function": "x^2",
+          "interval": [
+            1,
+            3
+          ]
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area under the curve $y=x^2$ from $x=1$ to $x=3$ is approximately 8.67."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_10",
+    "model": "gemma-4-31b-it",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 367,
+    "output_tokens": 59,
+    "latency_s": 11.408400058746338,
+    "cost_usd": 7.498e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_area",
+        "args": {
+          "base": 6,
+          "height": 10,
+          "unit": "cm"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of the right-angled triangle with a base of 6cm and a height of 10cm is 30 square centimeters."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_14",
+    "model": "gemma-4-31b-it",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 289,
+    "output_tokens": 52,
+    "latency_s": 3.3124730587005615,
+    "cost_usd": 6.126e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_derivative",
+        "args": {
+          "function": "3x^2 + 2x - 1"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The derivative of the function $3x^2 + 2x - 1$ is $6x + 2$."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_15",
+    "model": "gemma-4-31b-it",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 481,
+    "output_tokens": 80,
+    "latency_s": 3.929940938949585,
+    "cost_usd": 9.934000000000001e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "integrate",
+        "args": {
+          "end_x": 3,
+          "function": "x^3",
+          "method": "simpson",
+          "start_x": -2
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area under the curve for the function $y = x^3$ from $x = -2$ to $x = 3$ using the Simpson method is $12.25$."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_17",
+    "model": "gemma-4-31b-it",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 274,
+    "output_tokens": 67,
+    "latency_s": 3.5085561275482178,
+    "cost_usd": 6.516e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "get_prime_factors",
+        "args": {
+          "formatted": true,
+          "number": 450
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The prime factors of 450 are 2, 3, 3, 5, and 5 (or $2 \\times 3^2 \\times 5^2$)."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_19",
+    "model": "gemma-4-31b-it",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 256,
+    "output_tokens": 43,
+    "latency_s": 2.5720059871673584,
+    "cost_usd": 5.304e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "math.gcd",
+        "args": {
+          "num1": 40,
+          "num2": 50
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The greatest common divisor of 40 and 50 is 10."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_0",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.5071990489959717,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_1",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.5103039741516113,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_2",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.506572961807251,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_3",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.4882209300994873,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_4",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.49825096130371094,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_5",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.47954797744750977,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_6",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.49509096145629883,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_18",
+    "model": "gemma-4-31b-it",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 221,
+    "output_tokens": 125,
+    "latency_s": 7.435750961303711,
+    "cost_usd": 8.094e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "number_analysis.prime_factors",
+        "args": {
+          "number": 123456
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The prime factors of 123,456 are 2, 3, and 5144. Wait, let me re-calculate that more precisely.\n\nActually, the prime factorization of 123,456 is:\n$123,456 = 2^6 \\times 3 \\times 643$\n\nSo, the prime factors are **2, 3, and 643**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_7",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.4856741428375244,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_8",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.5028481483459473,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_9",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.49375271797180176,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_10",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.49572300910949707,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_11",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.49133801460266113,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_12",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.4902939796447754,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_13",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.5171830654144287,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_14",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.5057997703552246,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_15",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.5283467769622803,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_16",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.5060951709747314,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_17",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.499647855758667,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_18",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.5094871520996094,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_19",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.4840099811553955,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_16",
+    "model": "gemma-4-31b-it",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 354,
+    "output_tokens": 51,
+    "latency_s": 16.362091064453125,
+    "cost_usd": 6.996e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculus.derivative",
+        "args": {
+          "function": "2*x^2",
+          "value": 1
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The derivative of the function $2x^2$ at $x = 1$ is $4$."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_2",
+    "model": "gpt-oss-20b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 383,
+    "output_tokens": 240,
+    "latency_s": 2.492784261703491,
+    "cost_usd": 8.732e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "math.hypot",
+        "args": {
+          "x": 4,
+          "y": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The hypotenuse \\(c\\) is found using the Pythagorean theorem:\n\n\\[\nc = \\sqrt{4^2 + 5^2} = \\sqrt{16 + 25} = \\sqrt{41} \\approx 6.40\n\\]\n\nSo the length of the hypotenuse is \\(\\boxed{\\sqrt{41}\\ \\text{(about }6.40\\text{)}}\\)."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_0",
+    "model": "gpt-oss-20b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 310,
+    "output_tokens": 192,
+    "latency_s": 6.362309217453003,
+    "cost_usd": 7e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_triangle_area",
+        "args": {
+          "base": 10,
+          "height": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of the triangle is  \n\n\\[\n\\text{Area} = \\tfrac{1}{2}\\times \\text{base}\\times \\text{height}\n            = \\tfrac{1}{2}\\times 10 \\times 5\n            = 25 \\text{ square units.}\n\\]"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_1",
+    "model": "gpt-oss-20b",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 1,
+    "input_tokens": 472,
+    "output_tokens": 239,
+    "latency_s": 7.140509843826294,
+    "cost_usd": 9.058e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "math.factorial",
+        "args": {
+          "number": 5
+        },
+        "result": "ok"
+      },
+      {
+        "tool": "math.factorial",
+        "args": {
+          "number": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "120"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_4",
+    "model": "gpt-oss-20b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 327,
+    "output_tokens": 581,
+    "latency_s": 3.2958240509033203,
+    "cost_usd": 0.00018737999999999998,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic_equation",
+        "args": {
+          "a": 2,
+          "b": 6,
+          "c": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The quadratic equation is  \n\n\\[\n2x^{2}+6x+5=0\n\\]\n\n**Step 1 \u2013 Compute the discriminant**\n\n\\[\n\\Delta = b^{2}-4ac = 6^{2}-4(2)(5)=36-40=-4\n\\]\n\nSince \\(\\Delta<0\\), the roots are complex.\n\n**Step 2 \u2013 Apply the quadratic formula**\n\n\\[\nx=\\frac{-b\\pm\\sqrt{\\Delta}}{2a}\n   =\\frac{-6\\pm\\sqrt{-4}}{4}\n   =\\frac{-6\\pm 2i}{4}\n\\]\n\n**Step 3 \u2013 Simplify**\n\n\\[\nx = \\frac{-6}{4} \\pm \\frac{2i}{4}\n   = -\\frac{3}{2} \\pm \\frac{i}{2}\n\\]\n\n---\n\n**Roots**\n\n\\[\n\\boxed{x = -\\frac{3}{2} + \\frac{i}{2}\\quad\\text{and}\\quad x = -\\frac{3}{2} - \\frac{i}{2}}\n\\]\n\nThese are the two complex conjugate solutions of the equation \\(2x^2 + 6x + 5 = 0\\)."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_3",
+    "model": "gpt-oss-20b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 343,
+    "output_tokens": 210,
+    "latency_s": 7.68011212348938,
+    "cost_usd": 7.672e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "algebra.quadratic_roots",
+        "args": {
+          "a": 1,
+          "b": -3,
+          "c": 2
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The quadratic equation is  \n\n\\[\nx^2-3x+2=0\n\\]\n\nFactoring gives  \n\n\\[\n(x-1)(x-2)=0\n\\]\n\nHence the roots are  \n\n\\[\n\\boxed{x=1 \\quad \\text{and} \\quad x=2}\n\\]"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_6",
+    "model": "gpt-oss-20b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 331,
+    "output_tokens": 591,
+    "latency_s": 3.750666856765747,
+    "cost_usd": 0.00019053999999999997,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic",
+        "args": {
+          "a": 2,
+          "b": 5,
+          "c": 3
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The quadratic equation is  \n\n\\[\n2x^{2}+5x+3=0\n\\]\n\nUsing the quadratic formula  \n\n\\[\nx=\\frac{-b\\pm\\sqrt{b^{2}-4ac}}{2a}\n\\]\n\nwith \\(a=2,\\; b=5,\\; c=3\\):\n\n1. Compute the discriminant  \n   \\[\n   \\Delta = b^{2}-4ac = 5^{2}-4(2)(3)=25-24=1\n   \\]\n\n2. Find the roots  \n   \\[\n   x=\\frac{-5\\pm\\sqrt{1}}{2(2)}=\\frac{-5\\pm1}{4}\n   \\]\n\n   - For the \u201c+\u201d sign:  \n     \\[\n     x=\\frac{-5+1}{4}=\\frac{-4}{4}=-1\n     \\]\n\n   - For the \u201c\u2013\u201d sign:  \n     \\[\n     x=\\frac{-5-1}{4}=\\frac{-6}{4}=-\\frac{3}{2}=-1.5\n     \\]\n\n**Roots:** \\(\\boxed{-1 \\text{ and } -\\frac{3}{2}}\\) (or \\(-1.5\\))."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_7",
+    "model": "gpt-oss-20b",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 313,
+    "output_tokens": 196,
+    "latency_s": 2.418630838394165,
+    "cost_usd": 7.132e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_circumference",
+        "args": {
+          "radius": 4
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The circumference of a circle with a radius of 4 inches is\n\n\\[\nC = 2\\pi r = 2\\pi(4) = 8\\pi \\text{ inches}\n\\]\n\nNumerically, that\u2019s about\n\n\\[\n8\\pi \\approx 25.13 \\text{ inches}.\n\\]"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_8",
+    "model": "gpt-oss-20b",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 1,
+    "input_tokens": 498,
+    "output_tokens": 310,
+    "latency_s": 3.0718181133270264,
+    "cost_usd": 0.00011292,
+    "error": null,
+    "trace": [
+      {
+        "tool": "geometry.area_circle",
+        "args": {
+          "radius": 10
+        },
+        "result": "ok"
+      },
+      {
+        "tool": "geometry.area_circle",
+        "args": {
+          "radius": 10
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of a circle with a radius of 10 units is:\n\n\\[\nA = \\pi r^2 = \\pi \\times 10^2 = 100\\pi \\approx 314.16 \\text{ square units.}\n\\]"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_10",
+    "model": "gpt-oss-20b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 341,
+    "output_tokens": 183,
+    "latency_s": 2.848423957824707,
+    "cost_usd": 6.854e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_area",
+        "args": {
+          "base": 6,
+          "height": 10
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of the right\u2011angled triangle is  \n\n\\[\n\\text{Area} = \\frac{1}{2}\\times \\text{base}\\times \\text{height}\n            = \\frac{1}{2}\\times 6\\,\\text{cm}\\times 10\\,\\text{cm}\n            = 30\\,\\text{cm}^2.\n\\]"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_17",
+    "model": "kimi-k2.6",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 1,
+    "input_tokens": 540,
+    "output_tokens": 431,
+    "latency_s": 87.04228281974792,
+    "cost_usd": 0.0022370000000000003,
+    "error": null,
+    "trace": [
+      {
+        "tool": "get_prime_factors",
+        "args": {
+          "number": 450,
+          "formatted": true
+        },
+        "result": "ok"
+      },
+      {
+        "tool": "get_prime_factors",
+        "args": {},
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": " The prime factors of **450** are:\n\n**2, 3, 3, 5, 5**\n\nOr in exponential form:\n\n**2\u00b9 \u00d7 3\u00b2 \u00d7 5\u00b2**\n\nHere's the breakdown:\n- 450 \u00f7 2 = 225\n- 225 \u00f7 3 = 75\n- 75 \u00f7 3 = 25\n- 25 \u00f7 5 = 5\n- 5 \u00f7 5 = 1"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_9",
+    "model": "gpt-oss-20b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 305,
+    "output_tokens": 171,
+    "latency_s": 4.704133033752441,
+    "cost_usd": 6.35e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "geometry.calculate_area_circle",
+        "args": {
+          "radius": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of a circle with radius\u202f5 units is\n\n\\[\nA = \\pi r^2 = \\pi \\times 5^2 = 25\\pi \\approx 78.54 \\text{ square units.}\n\\]"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_11",
+    "model": "gpt-oss-20b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 321,
+    "output_tokens": 130,
+    "latency_s": 1.6808691024780273,
+    "cost_usd": 5.184e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_triangle_area",
+        "args": {
+          "base": 10,
+          "height": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of the triangle is **25 square units**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_12",
+    "model": "gpt-oss-20b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 301,
+    "output_tokens": 129,
+    "latency_s": 2.0159571170806885,
+    "cost_usd": 5.074e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "geometry.circumference",
+        "args": {
+          "radius": 3
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The circumference of a circle with radius\u202f3 is\n\n\\[\nC = 2\\pi r = 2\\pi \\times 3 = 6\\pi \\approx 18.85\n\\]"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_5",
+    "model": "gpt-oss-20b",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 390,
+    "output_tokens": 540,
+    "latency_s": 14.63242483139038,
+    "cost_usd": 0.0001776,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic",
+        "args": {
+          "a": 3,
+          "b": -11,
+          "c": -4
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The quadratic equation is  \n\n\\[\n3x^{2}-11x-4=0\n\\]\n\n**Discriminant**\n\n\\[\n\\Delta = b^{2}-4ac = (-11)^{2}-4(3)(-4)=121+48=169\n\\]\n\n\\[\n\\sqrt{\\Delta}=13\n\\]\n\n**Roots**\n\n\\[\nx=\\frac{-b\\pm\\sqrt{\\Delta}}{2a}\n   =\\frac{11\\pm13}{6}\n\\]\n\n1. \\(x_1=\\dfrac{11+13}{6}=\\dfrac{24}{6}=4\\)\n\n2. \\(x_2=\\dfrac{11-13}{6}=\\dfrac{-2}{6}=-\\dfrac{1}{3}\\)\n\n---\n\n**All real roots:** \\(\\boxed{\\,x=4,\\; x=-\\tfrac13\\,}\\)"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_14",
+    "model": "gpt-oss-20b",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 317,
+    "output_tokens": 236,
+    "latency_s": 2.071493148803711,
+    "cost_usd": 8.348e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_derivative",
+        "args": {
+          "expression": "3x^2 + 2x - 1"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The derivative of \\(3x^2 + 2x - 1\\) is\n\n\\[\n\\frac{d}{dx}\\bigl(3x^2 + 2x - 1\\bigr)=6x+2.\n\\]"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_13",
+    "model": "gpt-oss-20b",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 329,
+    "output_tokens": 385,
+    "latency_s": 3.3502001762390137,
+    "cost_usd": 0.00012866,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_area_under_curve",
+        "args": {
+          "function": "x^2",
+          "lower": 1,
+          "upper": 3
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area under the curve \\(y=x^{2}\\) from \\(x=1\\) to \\(x=3\\) is\n\n\\[\n\\int_{1}^{3} x^{2}\\,dx = \\left[\\frac{x^{3}}{3}\\right]_{1}^{3}\n= \\frac{3^{3}}{3} - \\frac{1^{3}}{3}\n= \\frac{27}{3} - \\frac{1}{3}\n= \\frac{26}{3}\\;\\text{(square units)} \\approx 8.67.\n\\]"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_16",
+    "model": "gpt-oss-20b",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 318,
+    "output_tokens": 279,
+    "latency_s": 3.197037696838379,
+    "cost_usd": 9.642e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculus.derivative",
+        "args": {
+          "function": "2x^2",
+          "point": 1
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The derivative of \\(2x^2\\) is \\(4x\\).  \nAt \\(x = 1\\):\n\n\\[\n4x \\big|_{x=1} = 4 \\times 1 = 4\n\\]\n\nSo the derivative at \\(x = 1\\) is **4**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_17",
+    "model": "gpt-oss-20b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 289,
+    "output_tokens": 353,
+    "latency_s": 2.6964731216430664,
+    "cost_usd": 0.00011745999999999999,
+    "error": null,
+    "trace": [
+      {
+        "tool": "get_prime_factors",
+        "args": {
+          "number": 450
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The prime factorization of **450** is:\n\n\\[\n450 = 2 \\times 3^2 \\times 5^2\n\\]\n\nSo the prime factors (with multiplicity) are:\n\n- \\(2\\)\n- \\(3\\) (twice)\n- \\(5\\) (twice)\n\nIn other words, \\(450 = 2 \\times 3 \\times 3 \\times 5 \\times 5\\)."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_18",
+    "model": "gpt-oss-20b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 304,
+    "output_tokens": 496,
+    "latency_s": 3.411029100418091,
+    "cost_usd": 0.00016095999999999998,
+    "error": null,
+    "trace": [
+      {
+        "tool": "number_analysis.prime_factors",
+        "args": {
+          "number": 123456
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The prime factorization of **123\u202f456** is:\n\n\\[\n123\\,456 = 2^6 \\times 3 \\times 643\n\\]\n\nSo the prime factors are:\n\n- \\(2\\) (six times)\n- \\(3\\)\n- \\(643\\) (which is itself a prime number)."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_19",
+    "model": "gpt-oss-20b",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 303,
+    "output_tokens": 148,
+    "latency_s": 1.8244080543518066,
+    "cost_usd": 5.652e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "math.gcd",
+        "args": {
+          "a": 40,
+          "b": 50
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The greatest common divisor (GCD) of 40 and 50 is **10**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_15",
+    "model": "gpt-oss-20b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 152,
+    "output_tokens": 965,
+    "latency_s": 9.123400926589966,
+    "cost_usd": 0.00029558,
+    "error": null,
+    "trace": [
+      {
+        "role": "assistant",
+        "content": "**Area under \\(y=x^{3}\\) from \\(x=-2\\) to \\(x=3\\) using Simpson\u2019s rule**\n\nSimpson\u2019s rule (for an even number of sub\u2011intervals \\(n\\)) is\n\n\\[\n\\int_{a}^{b} f(x)\\,dx \\;\\approx\\; \\frac{h}{3}\\Bigl[f(x_0)+4\\sum_{i\\;odd}f(x_i)+2\\sum_{i\\;even}f(x_i)+f(x_n)\\Bigr]\n\\]\n\nwhere  \n\\(h=\\dfrac{b-a}{n}\\), \\(x_i=a+ih\\).\n\nBecause \\(f(x)=x^3\\) is a cubic polynomial, Simpson\u2019s rule is **exact** for any even \\(n\\).  \nWe\u2019ll use the simplest choice \\(n=2\\) (two sub\u2011intervals).\n\n| \\(i\\) | \\(x_i\\) | \\(f(x_i)=x_i^3\\) |\n|-------|---------|------------------|\n| 0 | \\(-2\\) | \\(-8\\) |\n| 1 | \\(-2+ h = -2+2.5 = 0.5\\) | \\(0.125\\) |\n| 2 | \\(3\\) | \\(27\\) |\n\n*Step size*  \n\\(h = \\dfrac{3-(-2)}{2} = \\dfrac{5}{2} = 2.5\\)\n\n*Simpson\u2019s formula*  \n\n\\[\n\\begin{aligned}\n\\int_{-2}^{3} x^3\\,dx\n&= \\frac{h}{3}\\Bigl[f(-2)+4f(0.5)+f(3)\\Bigr] \\\\\n&= \\frac{2.5}{3}\\Bigl[(-8)+4(0.125)+27\\Bigr] \\\\\n&= \\frac{2.5}{3}\\Bigl[-8+0.5+27\\Bigr] \\\\\n&= \\frac{2.5}{3}\\,(19.5) \\\\\n&= \\frac{48.75}{3} \\\\\n&= 16.25\n\\end{aligned}\n\\]\n\n---\n\n### Result\n\n\\[\n\\boxed{\\displaystyle \\int_{-2}^{3} x^3\\,dx = 16.25}\n\\]\n\n(For a cubic function, Simpson\u2019s rule with any even number of sub\u2011intervals gives the exact value, which matches the analytic integral \\(\\frac{x^4}{4}\\big|_{-2}^{3} = 16.25\\).)"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_1",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 634,
+    "output_tokens": 800,
+    "latency_s": 9.292738914489746,
+    "cost_usd": 0.0017585,
+    "error": null,
+    "trace": [
+      {
+        "tool": "math.factorial",
+        "args": {
+          "number": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The factorial of 5 is 120."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_0",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 767,
+    "output_tokens": 1252,
+    "latency_s": 13.29483699798584,
+    "cost_usd": 0.0026957500000000002,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_triangle_area",
+        "args": {
+          "base": 10,
+          "height": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of the triangle is 25 square units.\n\n**Calculation:**\n$$ \\text{Area} = \\frac{1}{2} \\times \\text{base} \\times \\text{height} $$\n$$ \\text{Area} = \\frac{1}{2} \\times 10 \\times 5 $$\n$$ \\text{Area} = 25 $$"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_2",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 815,
+    "output_tokens": 1359,
+    "latency_s": 14.000415086746216,
+    "cost_usd": 0.00292175,
+    "error": null,
+    "trace": [
+      {
+        "tool": "math.hypot",
+        "args": {
+          "x": 4,
+          "y": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The hypotenuse of a right triangle with side lengths 4 and 5 is calculated using the Pythagorean theorem: $c = \\sqrt{a^2 + b^2}$.\n\n$$c = \\sqrt{4^2 + 5^2} = \\sqrt{16 + 25} = \\sqrt{41} \\approx 6.403$$\n\nThe hypotenuse is approximately **6.40**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_3",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 777,
+    "output_tokens": 1099,
+    "latency_s": 13.6820969581604,
+    "cost_usd": 0.00239225,
+    "error": null,
+    "trace": [
+      {
+        "tool": "algebra.quadratic_roots",
+        "args": {
+          "a": 1,
+          "b": -3,
+          "c": 2
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The roots of the quadratic equation $x^2 - 3x + 2 = 0$ are **1** and **2**.\n\nHere is the step-by-step calculation:\n1.  **Identify coefficients:** $a = 1$, $b = -3$, $c = 2$.\n2.  **Use the quadratic formula:**\n    $$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$\n3.  **Substitute values:**\n    $$x = \\frac{-(-3) \\pm \\sqrt{(-3)^2 - 4(1)(2)}}{2(1)}$$\n    $$x = \\frac{3 \\pm \\sqrt{9 - 8}}{2}$$\n    $$x = \\frac{3 \\pm \\sqrt{1}}{2}$$\n    $$x = \\frac{3 \\pm 1}{2}$$\n4.  **Solve for x:**\n    *   $x_1 = \\frac{3 + 1}{2} = \\frac{4}{2} = 2$\n    *   $x_2 = \\frac{3 - 1}{2} = \\frac{2}{2} = 1$\n\nThe roots are **1** and **2**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_5",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 966,
+    "output_tokens": 1307,
+    "latency_s": 13.302447080612183,
+    "cost_usd": 0.0028555,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic",
+        "args": {
+          "a": 3,
+          "b": -11,
+          "c": -4,
+          "root_type": "all"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "To find the roots of the quadratic equation with coefficients $a = 3$, $b = -11$, and $c = -4$, we use the quadratic formula:\n\n$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$\n\n**Step 1: Calculate the discriminant ($\\Delta$)**\n$$\\Delta = b^2 - 4ac$$\n$$\\Delta = (-11)^2 - 4(3)(-4)$$\n$$\\Delta = 121 + 48 = 169$$\n\n**Step 2: Calculate the roots**\nSince the discriminant is positive, there are two distinct real roots.\n$$x = \\frac{-(-11) \\pm \\sqrt{169}}{2(3)}$$\n$$x = \\frac{11 \\pm 13}{6}$$\n\nThis gives us two solutions:\n1. $x_1 = \\frac{11 + 13}{6} = \\frac{24}{6} = 4$\n2. $x_2 = \\frac{11 - 13}{6} = \\frac{-2}{6} = -\\frac{1}{3}$\n\n**Final Answer:**\nThe roots of the quadratic equation are **$4$** and **$-\\frac{1}{3}$**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_7",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 725,
+    "output_tokens": 1952,
+    "latency_s": 19.88143301010132,
+    "cost_usd": 0.00408525,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_circumference",
+        "args": {
+          "radius": 4,
+          "unit": "inches"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The circumference of a circle with a radius of 4 inches is **$8\\pi$ inches**, which is approximately **25.13 inches**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_8",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 699,
+    "output_tokens": 1470,
+    "latency_s": 15.289211988449097,
+    "cost_usd": 0.00311475,
+    "error": null,
+    "trace": [
+      {
+        "tool": "geometry.area_circle",
+        "args": {
+          "radius": 10
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of a circle with a radius of 10 is approximately 314.16 square meters."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_10",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 814,
+    "output_tokens": 655,
+    "latency_s": 7.411659002304077,
+    "cost_usd": 0.0015135,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_area",
+        "args": {
+          "base": 6,
+          "height": 10,
+          "unit": "cm"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of the right-angled triangle is 30 cm\u00b2."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_9",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 711,
+    "output_tokens": 848,
+    "latency_s": 11.076937913894653,
+    "cost_usd": 0.00187375,
+    "error": null,
+    "trace": [
+      {
+        "tool": "geometry.calculate_area_circle",
+        "args": {
+          "radius": 5,
+          "unit": "units"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of a circle with a radius of 5 units is $25\\pi$ square units, which is approximately 78.54 square units."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_12",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 688,
+    "output_tokens": 1275,
+    "latency_s": 14.34058690071106,
+    "cost_usd": 0.002722,
+    "error": null,
+    "trace": [
+      {
+        "tool": "geometry.circumference",
+        "args": {
+          "radius": 3
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The circumference of a circle with a radius of 3 is $6\\pi$ (approximately 18.85 cm)."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_4",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 757,
+    "output_tokens": 1792,
+    "latency_s": 58.52837896347046,
+    "cost_usd": 0.00377325,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic_equation",
+        "args": {
+          "a": 2,
+          "b": 6,
+          "c": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The quadratic equation is $2x^2 + 6x + 5 = 0$.\n\nUsing the quadratic formula $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$:\n\n1.  **Calculate the discriminant:**\n    $\\Delta = b^2 - 4ac = 6^2 - 4(2)(5) = 36 - 40 = -4$\n\n2.  **Find the roots:**\n    Since the discriminant is negative, the roots are complex numbers.\n    $x = \\frac{-6 \\pm \\sqrt{-4}}{2(2)}$\n    $x = \\frac{-6 \\pm 2i}{4}$\n    $x = \\frac{-6}{4} \\pm \\frac{2i}{4}$\n    $x = -1.5 \\pm 0.5i$\n\nThe roots of the equation are **$-1.5 + 0.5i$** and **$-1.5 - 0.5i$**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_6",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 753,
+    "output_tokens": 1384,
+    "latency_s": 56.64689826965332,
+    "cost_usd": 0.00295625,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic",
+        "args": {
+          "a": 2,
+          "b": 5,
+          "c": 3
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The roots of the quadratic equation $2x^2 + 5x + 3 = 0$ are **-1** and **-1.5**.\n\nHere is the step-by-step calculation:\n1.  **Identify coefficients**: $a = 2$, $b = 5$, $c = 3$.\n2.  **Calculate the discriminant** ($\\Delta$):\n    $$ \\Delta = b^2 - 4ac = 5^2 - 4(2)(3) = 25 - 24 = 1 $$\n3.  **Apply the quadratic formula**:\n    $$ x = \\frac{-b \\pm \\sqrt{\\Delta}}{2a} $$\n    $$ x = \\frac{-5 \\pm \\sqrt{1}}{2(2)} $$\n    $$ x = \\frac{-5 \\pm 1}{4} $$\n4.  **Find the two roots**:\n    *   $x_1 = \\frac{-5 + 1}{4} = \\frac{-4}{4} = -1$\n    *   $x_2 = \\frac{-5 - 1}{4} = \\frac{-6}{4} = -1.5$"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_11",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 725,
+    "output_tokens": 875,
+    "latency_s": 30.180213928222656,
+    "cost_usd": 0.00193125,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_triangle_area",
+        "args": {
+          "base": 10,
+          "height": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of the triangle is 25 square units."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_13",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 837,
+    "output_tokens": 2151,
+    "latency_s": 20.05611300468445,
+    "cost_usd": 0.0045112500000000005,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_area_under_curve",
+        "args": {
+          "function": "x**2",
+          "interval": [
+            1,
+            3
+          ]
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area under the curve $y = x^2$ from $x=1$ to $x=3$ is calculated by evaluating the definite integral:\n\n$$ \\int_{1}^{3} x^2 \\, dx $$\n\nUsing the power rule for integration $\\int x^n \\, dx = \\frac{x^{n+1}}{n+1}$:\n\n$$ \\left[ \\frac{x^3}{3} \\right]_{1}^{3} = \\frac{3^3}{3} - \\frac{1^3}{3} $$\n$$ = \\frac{27}{3} - \\frac{1}{3} $$\n$$ = 9 - \\frac{1}{3} $$\n$$ = \\frac{26}{3} $$\n\nSo, the area is **$\\frac{26}{3}$** or approximately **8.67**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_15",
+    "model": "qwen3.6-35b-a3b",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 927,
+    "output_tokens": 1305,
+    "latency_s": 12.45990800857544,
+    "cost_usd": 0.00284175,
+    "error": null,
+    "trace": [
+      {
+        "tool": "integrate",
+        "args": {
+          "function": "x^3",
+          "start_x": -2,
+          "end_x": 3,
+          "method": "simpson"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area under the curve $y = x^3$ from $x = -2$ to $x = 3$ using Simpson's method is **16.25**.\n\nSince Simpson's method is exact for polynomials of degree 3 or less, this result matches the exact value of the definite integral:\n$$ \\int_{-2}^{3} x^3 \\, dx = \\left[ \\frac{x^4}{4} \\right]_{-2}^{3} = \\frac{3^4}{4} - \\frac{(-2)^4}{4} = \\frac{81}{4} - \\frac{16}{4} = \\frac{65}{4} = 16.25 $$"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_16",
+    "model": "qwen3.6-35b-a3b",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 802,
+    "output_tokens": 1283,
+    "latency_s": 12.737939834594727,
+    "cost_usd": 0.0027665000000000003,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculus.derivative",
+        "args": {
+          "function": "2x^2",
+          "value": 1,
+          "function_variable": "x"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "ok\n`\nThis looks like the content of the response.\nIf the tool is supposed to return the derivative value, and it returned \"ok\", that's ambiguous.\nHowever, in many of these few-shot examples or standard interactions, if the tool returns a specific string, that's the answer. But \"ok\" is not a number.\nMaybe the tool output is actually the number, and the prompt display is misleading?\nOr maybe I should just calculate it.\n$f(x) = 2x^2 \\implies f'(x) = 4x$. At $x=1$, $f'(1) = 4$.\n\nLet's assume the tool execution was successful and the result is 4. I will state the result.\n\nWait, looking at the provided tool response format in similar tasks, usually it's `{\"result\": 4}` or similar. Here it is just `ok`.\nLet's assume the tool *did* compute it and the \"ok\" indicates success, but I need to provide the final answer. Since I can't see the actual numeric return in the \"ok\" string, I will rely on my own calculation which is trivial.\n\nFunction: $2x^2$\nDerivative: $4x$\nAt $x=1$: $4(1) = 4$.\n\nI will provide the answer 4.\n\nOne more possibility: The tool response `ok` is a placeholder in the prompt description and the actual tool output would be the number. I will proceed with the answer 4.\n\nLet's verify the tool call parameters again.\nfunction: \"2x^2\"\nvalue: 1\nfunction_variable: \"x\"\n\nCalculation:\n$\\frac{d}{dx}(2x^2) = 4x$\n$4(1) = 4$\n\nThe answer is 4."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_19",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 698,
+    "output_tokens": 1059,
+    "latency_s": 9.877494096755981,
+    "cost_usd": 0.0022925000000000003,
+    "error": null,
+    "trace": [
+      {
+        "tool": "math.gcd",
+        "args": {
+          "num1": 40,
+          "num2": 50
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The greatest common divisor of 40 and 50 is 10."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_14",
+    "model": "qwen3.6-35b-a3b",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 714,
+    "output_tokens": 1652,
+    "latency_s": 35.5729877948761,
+    "cost_usd": 0.0034825,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_derivative",
+        "args": {
+          "function": "3x^2 + 2x - 1"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The derivative of the function $3x^2 + 2x - 1$ is $6x + 2$."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_1",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 402,
+    "output_tokens": 160,
+    "latency_s": 12.159732818603516,
+    "cost_usd": 0.0012667999999999998,
+    "error": null,
+    "trace": [
+      {
+        "tool": "math.factorial",
+        "args": {
+          "number": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The factorial of 5 has been calculated! Here's the breakdown:\n\n**5! = 120**\n\nThe calculation works as follows:\n- 5! = 5 \u00d7 4 \u00d7 3 \u00d7 2 \u00d7 1\n- 5! = 120\n\nSo, the factorial of 5 is **120**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_0",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 538,
+    "output_tokens": 214,
+    "latency_s": 19.86188006401062,
+    "cost_usd": 0.0016948,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_triangle_area",
+        "args": {
+          "base": 10,
+          "height": 5,
+          "unit": "units"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of the triangle is **25 square units**.\n\nHere's the calculation:\n\n- **Formula:** Area = \u00bd \u00d7 base \u00d7 height\n- **Base:** 10 units\n- **Height:** 5 units\n- **Area:** \u00bd \u00d7 10 \u00d7 5 = **25 square units**"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_17",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 1,
+    "input_tokens": 1149,
+    "output_tokens": 2106,
+    "latency_s": 41.26512694358826,
+    "cost_usd": 0.00449925,
+    "error": null,
+    "trace": [
+      {
+        "tool": "get_prime_factors",
+        "args": {
+          "number": 450,
+          "formatted": true
+        },
+        "result": "ok"
+      },
+      {
+        "tool": "get_prime_factors",
+        "args": {
+          "number": 450,
+          "formatted": false
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The prime factors of 450 are **2, 3, 3, 5, 5**.\n\nHere is the step-by-step breakdown:\n1.  $450 \\div 2 = 225$\n2.  $225 \\div 3 = 75$\n3.  $75 \\div 3 = 25$\n4.  $25 \\div 5 = 5$\n5.  $5 \\div 5 = 1$\n\nSo, the prime factorization is $2 \\times 3^2 \\times 5^2$."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_2",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 605,
+    "output_tokens": 235,
+    "latency_s": 12.803684711456299,
+    "cost_usd": 0.0018809999999999999,
+    "error": null,
+    "trace": [
+      {
+        "tool": "math.hypot",
+        "args": {
+          "x": 4,
+          "y": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The hypotenuse of a right triangle with sides **4** and **5** is calculated as:\n\n$$c = \\sqrt{4^2 + 5^2} = \\sqrt{16 + 25} = \\sqrt{41} \\approx 6.403$$\n\nSo, the length of the hypotenuse is approximately **6.403** units."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_4",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 541,
+    "output_tokens": 544,
+    "latency_s": 21.44981098175049,
+    "cost_usd": 0.0031510000000000006,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic_equation",
+        "args": {
+          "a": 2,
+          "b": 6,
+          "c": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the results for the quadratic equation **2x\u00b2 + 6x + 5 = 0**:\n\n### Step-by-Step Solution:\n\n1. **Identify the coefficients:**\n   - a = 2, b = 6, c = 5\n\n2. **Calculate the discriminant (\u0394):**\n   - \u0394 = b\u00b2 - 4ac = 6\u00b2 - 4(2)(5) = 36 - 40 = **-4**\n\n3. **Since the discriminant is negative**, the roots are **complex (imaginary)**:\n\n4. **Find the roots using the quadratic formula:**\n   - x = (-b \u00b1 \u221a\u0394) / 2a\n   - x = (-6 \u00b1 \u221a(-4)) / 4\n   - x = (-6 \u00b1 2i) / 4\n\n### \u2705 Roots:\n| Root | Value |\n|------|-------|\n| **x\u2081** | **-3/2 + i/2** \u2248 **-1.5 + 0.5i** |\n| **x\u2082** | **-3/2 - i/2** \u2248 **-1.5 - 0.5i** |\n\nSince the discriminant is negative, this quadratic equation has **no real roots** \u2014 only two complex conjugate roots."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_3",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 547,
+    "output_tokens": 499,
+    "latency_s": 24.68323302268982,
+    "cost_usd": 0.0029614000000000003,
+    "error": null,
+    "trace": [
+      {
+        "tool": "algebra.quadratic_roots",
+        "args": {
+          "a": 1,
+          "b": -3,
+          "c": 2
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The roots of the quadratic equation **x\u00b2 - 3x + 2 = 0** are:\n\n- **x\u2081 = 2**\n- **x\u2082 = 1**\n\n### How it works:\n\nUsing the **quadratic formula**:\n\n$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$\n\nSubstituting the values **a = 1**, **b = -3**, **c = 2**:\n\n$$x = \\frac{-(-3) \\pm \\sqrt{(-3)^2 - 4(1)(2)}}{2(1)} = \\frac{3 \\pm \\sqrt{9 - 8}}{2} = \\frac{3 \\pm 1}{2}$$\n\nThis gives us:\n- **x\u2081 = (3 + 1) / 2 = 2**\n- **x\u2082 = (3 - 1) / 2 = 1**\n\n### Verification:\n- x = 2: (2)\u00b2 - 3(2) + 2 = 4 - 6 + 2 = 0 \u2705\n- x = 1: (1)\u00b2 - 3(1) + 2 = 1 - 3 + 2 = 0 \u2705"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_6",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 521,
+    "output_tokens": 473,
+    "latency_s": 10.228307008743286,
+    "cost_usd": 0.0028106,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic",
+        "args": {
+          "a": 2,
+          "b": 5,
+          "c": 3
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "For the quadratic equation **2x\u00b2 + 5x + 3 = 0**, here are the results:\n\n### Using the Quadratic Formula:\n**x = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / 2a**\n\n1. **Discriminant (\u0394):**\n   \u0394 = b\u00b2 - 4ac = 5\u00b2 - 4(2)(3) = 25 - 24 = **1**\n\n2. **Roots:**\n   - **x\u2081** = (-5 + \u221a1) / (2 \u00d7 2) = (-5 + 1) / 4 = -4/4 = **-1**\n   - **x\u2082** = (-5 - \u221a1) / (2 \u00d7 2) = (-5 - 1) / 4 = -6/4 = **-3/2**\n\n### \u2705 The roots are **x = -1** and **x = -3/2**\n\nSince the discriminant is positive (\u0394 = 1), the equation has **two distinct real roots**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_8",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 456,
+    "output_tokens": 203,
+    "latency_s": 20.204209089279175,
+    "cost_usd": 0.0015316000000000001,
+    "error": null,
+    "trace": [
+      {
+        "tool": "geometry.area_circle",
+        "args": {
+          "radius": 10
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of a circle with a radius of 10 is **100\u03c0** (approximately **314.16**) square units.\n\nThis is calculated using the formula:\n\n**Area = \u03c0 \u00d7 r\u00b2 = \u03c0 \u00d7 10\u00b2 = 100\u03c0**\n\nIf you'd like the result in specific units (e.g., meters, centimeters), just let me know!"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_7",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 518,
+    "output_tokens": 267,
+    "latency_s": 33.68845176696777,
+    "cost_usd": 0.0019000000000000002,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_circumference",
+        "args": {
+          "radius": 4,
+          "unit": "inches"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The circumference of a circle with a radius of 4 inches is **25.13 inches** (or exactly **8\u03c0 inches**).\n\nThis is calculated using the formula: **C = 2\u03c0r**, where:\n- C = circumference\n- \u03c0 \u2248 3.14159\n- r = radius = 4 inches\n\nSo: C = 2 \u00d7 \u03c0 \u00d7 4 = 8\u03c0 \u2248 **25.13 inches**"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_10",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 583,
+    "output_tokens": 224,
+    "latency_s": 11.060630083084106,
+    "cost_usd": 0.0018018,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_area",
+        "args": {
+          "base": 6,
+          "height": 10,
+          "unit": "cm"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of the right-angled triangle has been calculated successfully! Here are the details:\n\n- **Base:** 6 cm\n- **Height:** 10 cm\n- **Formula:** Area = \u00bd \u00d7 base \u00d7 height\n- **Calculation:** Area = \u00bd \u00d7 6 \u00d7 10 = **30 cm\u00b2**\n\nThe area of the right-angled triangle is **30 square centimeters (cm\u00b2)**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_11",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 493,
+    "output_tokens": 202,
+    "latency_s": 9.84564471244812,
+    "cost_usd": 0.001579,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_triangle_area",
+        "args": {
+          "base": 10,
+          "height": 5
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of a triangle with a **base of 10 units** and a **height of 5 units** is **25 square units**.\n\nThis is calculated using the formula:\n\n**Area = \u00bd \u00d7 base \u00d7 height = \u00bd \u00d7 10 \u00d7 5 = 25**"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_9",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 541,
+    "output_tokens": 368,
+    "latency_s": 27.036009073257446,
+    "cost_usd": 0.0023766,
+    "error": null,
+    "trace": [
+      {
+        "tool": "geometry.calculate_area_circle",
+        "args": {
+          "radius": 5,
+          "unit": "units"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area of a circle with a radius of 5 units is calculated using the formula:\n\n**Area = \u03c0 \u00d7 r\u00b2**\n\nWhere:\n- \u03c0 \u2248 3.14159\n- r = 5 units\n\n**Calculation:**\nArea = \u03c0 \u00d7 5\u00b2 = \u03c0 \u00d7 25 = 25\u03c0 \u2248 **78.54 square units**\n\nThe area of the circle is approximately 78.54 square units."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_13",
+    "model": "glm-5.1",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 639,
+    "output_tokens": 408,
+    "latency_s": 11.79390573501587,
+    "cost_usd": 0.0026898,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_area_under_curve",
+        "args": {
+          "function": "x^2",
+          "interval": [
+            1,
+            3
+          ]
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area under the curve **y = x\u00b2** from **x = 1** to **x = 3** has been calculated. Here's a summary:\n\n### Result\nThe area under the curve is **26/3 \u2248 8.6667** square units.\n\n### How it's calculated (analytically):\nUsing the definite integral:\n\n$$\\int_{1}^{3} x^2 \\, dx = \\left[\\frac{x^3}{3}\\right]_{1}^{3} = \\frac{3^3}{3} - \\frac{1^3}{3} = \\frac{27}{3} - \\frac{1}{3} = \\frac{26}{3} \\approx 8.667$$\n\nThis represents the total area between the parabola y = x\u00b2 and the x-axis, bounded by x = 1 and x = 3."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_12",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 447,
+    "output_tokens": 167,
+    "latency_s": 14.722103118896484,
+    "cost_usd": 0.0013606,
+    "error": null,
+    "trace": [
+      {
+        "tool": "geometry.circumference",
+        "args": {
+          "radius": 3
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The circumference of a circle with radius 3 is:\n\n**C = 2\u03c0r = 2 \u00d7 \u03c0 \u00d7 3 = 6\u03c0 \u2248 18.85 cm**\n\nSo the circumference is approximately **18.85 cm** (or exactly **6\u03c0 cm**)."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_14",
+    "model": "glm-5.1",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 503,
+    "output_tokens": 318,
+    "latency_s": 15.51386284828186,
+    "cost_usd": 0.0021034,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculate_derivative",
+        "args": {
+          "function": "3x^2 + 2x - 1"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The derivative of the function **3x\u00b2 + 2x - 1** is:\n\n## **6x + 2**\n\nHere's the step-by-step breakdown using the power rule:\n\n| Term | Rule Applied | Derivative |\n|------|-------------|------------|\n| 3x\u00b2 | Power Rule: d/dx(ax\u207f) = anx\u207f\u207b\u00b9 | 6x |\n| 2x | Power Rule: d/dx(ax) = a | 2 |\n| -1 | Constant Rule: d/dx(c) = 0 | 0 |\n\n**Summing them up:** 6x + 2 + 0 = **6x + 2**"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_16",
+    "model": "glm-5.1",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 599,
+    "output_tokens": 266,
+    "latency_s": 10.530855894088745,
+    "cost_usd": 0.002009,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculus.derivative",
+        "args": {
+          "function": "2x^2",
+          "value": 1,
+          "function_variable": "x"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The derivative of the function **f(x) = 2x\u00b2** is **f'(x) = 4x** (using the power rule).\n\nEvaluating at **x = 1**:\n\n**f'(1) = 4 \u00d7 1 = 4**\n\nSo, the derivative of **2x\u00b2** at **x = 1** is **4**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_15",
+    "model": "glm-5.1",
+    "success": false,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 747,
+    "output_tokens": 630,
+    "latency_s": 32.23131084442139,
+    "cost_usd": 0.0038178,
+    "error": null,
+    "trace": [
+      {
+        "tool": "integrate",
+        "args": {
+          "function": "x^3",
+          "start_x": -2,
+          "end_x": 3,
+          "method": "simpson"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The area under the curve **y = x\u00b3** from **x = -2** to **x = 3** has been calculated using **Simpson's method**.\n\n### Result:\nThe area is **16.25 square units** (or **65/4** in exact form).\n\n### How it works:\nThe exact integral is computed as:\n\n$$\\int_{-2}^{3} x^3 \\, dx = \\left[\\frac{x^4}{4}\\right]_{-2}^{3} = \\frac{3^4}{4} - \\frac{(-2)^4}{4} = \\frac{81}{4} - \\frac{16}{4} = \\frac{65}{4} = 16.25$$\n\n### Key Observations:\n- From **x = -2 to x = 0**, the function is negative (the curve lies below the x-axis), contributing a negative area of **-4**.\n- From **x = 0 to x = 3**, the function is positive (the curve lies above the x-axis), contributing a positive area of **20.25**.\n- The **net signed area** is **16.25**, which is what Simpson's method computes.\n\n> **Note:** If you need the total (unsigned) area, you would need to split the integral at x = 0 and take the absolute value of each part, giving a total area of **24.25**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_18",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 649,
+    "output_tokens": 1823,
+    "latency_s": 165.14031219482422,
+    "cost_usd": 0.00380825,
+    "error": null,
+    "trace": [
+      {
+        "tool": "number_analysis.prime_factors",
+        "args": {
+          "number": 123456
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The prime factors of 123456 are **2, 3, and 643**.\n\nHere is the step-by-step factorization:\n1.  **Divide by 2**: 123456 is even, so we divide by 2 repeatedly.\n    *   $123456 \\div 2 = 61728$\n    *   $61728 \\div 2 = 30864$\n    *   $30864 \\div 2 = 15432$\n    *   $15432 \\div 2 = 7716$\n    *   $7716 \\div 2 = 3858$\n    *   $3858 \\div 2 = 1929$\n    *   This gives us $2^6$ as a factor.\n\n2.  **Divide by 3**: The sum of the digits of 1929 is $1+9+2+9=21$, which is divisible by 3.\n    *   $1929 \\div 3 = 643$\n\n3.  **Check 643**: We check for divisibility by primes up to $\\sqrt{643} \\approx 25.3$.\n    *   It is not divisible by 2, 3, 5, 7, 11, 13, 17, 19, or 23.\n    *   Therefore, 643 is a prime number.\n\nSo, the prime factorization is:\n$$123456 = 2^6 \\times 3 \\times 643$$"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_19",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 442,
+    "output_tokens": 281,
+    "latency_s": 14.874922037124634,
+    "cost_usd": 0.0018552,
+    "error": null,
+    "trace": [
+      {
+        "tool": "math.gcd",
+        "args": {
+          "num1": 40,
+          "num2": 50
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The **greatest common divisor (GCD)** of **40** and **50** is **10**.\n\nHere's a quick breakdown:\n- **Factors of 40:** 1, 2, 4, 5, 8, 10, 20, 40\n- **Factors of 50:** 1, 2, 5, 10, 25, 50\n- **Common factors:** 1, 2, 5, 10\n- **Greatest common divisor:** **10**"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_0",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.8306069374084473,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_triangle_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_1",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.2850370407104492,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_2",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.8098189830780029,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_3",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.303178071975708,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_4",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.16614890098571777,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic_equation': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_5",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.8935458660125732,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_6",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.18482398986816406,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_7",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.28481411933898926,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_circumference': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_8",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.36014795303344727,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_9",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.20345211029052734,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_10",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.42072606086730957,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_11",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.29647111892700195,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_triangle_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_12",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.25971198081970215,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_13",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.15374016761779785,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_area_under_curve': 'float' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_14",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.3227651119232178,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_derivative': 'float' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_15",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.22895073890686035,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'integrate': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_17",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 1,
+    "input_tokens": 758,
+    "output_tokens": 347,
+    "latency_s": 28.368239164352417,
+    "cost_usd": 0.002588,
+    "error": null,
+    "trace": [
+      {
+        "tool": "get_prime_factors",
+        "args": {
+          "formatted": true,
+          "number": 450
+        },
+        "result": "ok"
+      },
+      {
+        "tool": "get_prime_factors",
+        "args": {
+          "formatted": false,
+          "number": 450
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the prime factors of **450**:\n\n**450 = 2 \u00d7 3\u00b2 \u00d7 5\u00b2**\n\nBreaking it down step by step:\n| Step | Division | Result |\n|------|----------|--------|\n| 1 | 450 \u00f7 2 | 225 |\n| 2 | 225 \u00f7 3 | 75 |\n| 3 | 75 \u00f7 3 | 25 |\n| 4 | 25 \u00f7 5 | 5 |\n| 5 | 5 \u00f7 5 | 1 |\n\nSo the prime factorization is: **450 = 2 \u00d7 3 \u00d7 3 \u00d7 5 \u00d7 5**\n\nThe distinct prime factors of 450 are **2, 3, and 5**."
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_16",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.21530389785766602,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_17",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.24746990203857422,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'get_prime_factors': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_18",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.15398812294006348,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_19",
+    "model": "gpt-5",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.18929481506347656,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_0",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.20441412925720215,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_triangle_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_1",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.25990724563598633,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_2",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.21048927307128906,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_4",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.13743305206298828,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic_equation': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_5",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.16865324974060059,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_3",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.4762308597564697,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_6",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.2610321044921875,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_7",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.24109578132629395,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_circumference': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_8",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.2038891315460205,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_9",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.18580985069274902,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_10",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.1532449722290039,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_11",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.1674330234527588,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_triangle_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_13",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.2049562931060791,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_area_under_curve': 'float' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_12",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.27111196517944336,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_14",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.20473599433898926,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_derivative': 'float' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_15",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.3663308620452881,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'integrate': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_16",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.1637880802154541,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_18",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.19298100471496582,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_17",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.23798179626464844,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'get_prime_factors': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_19",
+    "model": "gpt-5-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.16905617713928223,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_0",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.23512005805969238,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_triangle_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_1",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.27046799659729004,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_2",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.23022723197937012,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_3",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.1786201000213623,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_4",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.20555496215820312,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic_equation': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_5",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.1658492088317871,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_6",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.19670987129211426,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_7",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.21859192848205566,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_circumference': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_8",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.19398021697998047,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_9",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.14736008644104004,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_10",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.22560882568359375,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_12",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.18326663970947266,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_11",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.37116003036499023,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_triangle_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_13",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.2010798454284668,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_area_under_curve': 'float' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_14",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.19272708892822266,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_derivative': 'float' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_15",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.1535501480102539,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'integrate': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_16",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.1781940460205078,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_17",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.17440271377563477,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'get_prime_factors': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_18",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.18287897109985352,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_0",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.1920309066772461,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_triangle_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_19",
+    "model": "gpt-5-nano",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.37696003913879395,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_1",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.14600300788879395,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_2",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.1542210578918457,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_3",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.200117826461792,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_4",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.1882002353668213,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic_equation': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_5",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.17672324180603027,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_7",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.19562530517578125,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_circumference': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_6",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.24535107612609863,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_8",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.1678159236907959,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_9",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.14968395233154297,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_10",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.17145705223083496,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_11",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.31427526473999023,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_triangle_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_12",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.2022249698638916,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_13",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.15328717231750488,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_area_under_curve': 'float' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_14",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.2746608257293701,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_derivative': 'float' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_16",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.3538999557495117,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_17",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.19927597045898438,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'get_prime_factors': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_18",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.1659870147705078,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_19",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.18411684036254883,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_15",
+    "model": "gpt-4o",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 1.2120192050933838,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'integrate': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_0",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.18476295471191406,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_triangle_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_1",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.19988203048706055,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_2",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.17535805702209473,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_3",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.19583678245544434,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_4",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.18327116966247559,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic_equation': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_5",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.18347907066345215,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_6",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.1899409294128418,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_7",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.16148591041564941,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_circumference': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_8",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.19497179985046387,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_9",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.23825693130493164,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_10",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.14204692840576172,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_12",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.1617891788482666,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_11",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.3317739963531494,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_triangle_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_13",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.20684313774108887,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_area_under_curve': 'float' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_14",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.18091702461242676,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_derivative': 'float' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_15",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.19025087356567383,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'integrate': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_16",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.1518092155456543,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_17",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.17183709144592285,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'get_prime_factors': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_18",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.17848587036132812,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_19",
+    "model": "gpt-4o-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.17717909812927246,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_0",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.22627520561218262,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_triangle_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_1",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.26250481605529785,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_2",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.28848981857299805,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_3",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.18009281158447266,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_4",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.2002410888671875,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic_equation': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_5",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.2126619815826416,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_7",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.15299296379089355,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_circumference': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_6",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.2047717571258545,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'solve_quadratic': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_8",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.18250083923339844,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_9",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.18913602828979492,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_10",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.1761770248413086,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_11",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.18188905715942383,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_triangle_area': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_18",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 392,
+    "output_tokens": 430,
+    "latency_s": 33.08174967765808,
+    "cost_usd": 0.0024408000000000003,
+    "error": null,
+    "trace": [
+      {
+        "tool": "number_analysis.prime_factors",
+        "args": {
+          "number": 123456
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "The prime factors of **123456** are:\n\n**2\u2076 \u00d7 3 \u00d7 643**\n\nHere's the step-by-step breakdown:\n\n| Step | Division | Result |\n|------|----------|--------|\n| 1 | 123456 \u00f7 2 | 61728 |\n| 2 | 61728 \u00f7 2 | 30864 |\n| 3 | 30864 \u00f7 2 | 15432 |\n| 4 | 15432 \u00f7 2 | 7716 |\n| 5 | 7716 \u00f7 2 | 3858 |\n| 6 | 3858 \u00f7 2 | 1929 |\n| 7 | 1929 \u00f7 3 | 643 |\n| 8 | 643 is **prime** | \u2014 |\n\nSo, the prime factorization is:\n\n**123456 = 2 \u00d7 2 \u00d7 2 \u00d7 2 \u00d7 2 \u00d7 2 \u00d7 3 \u00d7 643 = 2\u2076 \u00d7 3 \u00d7 643**"
+      }
+    ]
+  },
+  {
+    "task_id": "bfcl-simple_python_12",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.20819473266601562,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_13",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.1836409568786621,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_area_under_curve': 'float' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_16",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.13514280319213867,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_15",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.17980313301086426,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'integrate': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_18",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.20389723777770996,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_19",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.20405912399291992,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.name', 'code': 'invalid_value'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_14",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.8263781070709229,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'calculate_derivative': 'float' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_17",
+    "model": "o4-mini",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.8160400390625,
+    "cost_usd": 0.0,
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Invalid schema for function 'get_prime_factors': 'dict' is not valid under any of the given schemas.\", 'type': 'invalid_request_error', 'param': 'tools[0].function.parameters', 'code': 'invalid_function_parameters'}}",
+    "trace": []
+  },
+  {
+    "task_id": "bfcl-simple_python_5",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 1,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 1,
+    "input_tokens": 788,
+    "output_tokens": 759,
+    "latency_s": 168.15753197669983,
+    "cost_usd": 0.0044428,
+    "error": null,
+    "trace": [
+      {
+        "tool": "solve_quadratic",
+        "args": {
+          "a": 3,
+          "b": -11,
+          "c": -4,
+          "root_type": "all"
+        },
+        "result": "ok"
+      },
+      {
+        "role": "assistant",
+        "content": "Here are the results for the quadratic equation **3x\u00b2 - 11x - 4 = 0**:\n\n---\n\n### Step-by-Step Solution\n\nUsing the **quadratic formula**:\n\n$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$\n\n1. **Calculate the discriminant:**\n   $$\\Delta = b^2 - 4ac = (-11)^2 - 4(3)(-4) = 121 + 48 = 169$$\n\n2. **Since \u0394 > 0**, the equation has **two distinct real roots**.\n\n3. **Compute the roots:**\n   $$x = \\frac{11 \\pm \\sqrt{169}}{2(3)} = \\frac{11 \\pm 13}{6}$$\n\n   - **Root 1:** $x = \\frac{11 + 13}{6} = \\frac{24}{6} = \\boxed{4}$\n   - **Root 2:** $x = \\frac{11 - 13}{6} = \\frac{-2}{6} = \\boxed{-\\frac{1}{3}}$\n\n---\n\n### Summary\n| Property | Value |\n|---|---|\n| **Equation** | 3x\u00b2 - 11x - 4 = 0 |\n| **Discriminant (\u0394)** | 169 (positive \u2192 2 real roots) |\n| **Root 1** | **4** |\n| **Root 2** | **-1/3** |\n\nBoth roots are real and distinct. You can verify by substituting back:\n- **x = 4:** 3(16) - 11(4) - 4 = 48 - 44 - 4 = 0 \u2705\n- **x = -1/3:** 3(1/9) - 11(-1/3) - 4 = 1/3 + 11/3 - 4 = 12/3 - 4 = 0 \u2705"
+      }
+    ]
+  }
+]

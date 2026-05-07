@@ -1,0 +1,119 @@
+{
+  "deepseek-v4-pro": {
+    "tool_accuracy": 0.65,
+    "n_scored_tasks": 20,
+    "completion_rate": 0.8,
+    "avg_steps_on_success": 2.125,
+    "cost_per_success_usd": 0.00361104375,
+    "latency_per_success_s": 8.310667037963867,
+    "n_tasks": 20
+  },
+  "kimi-k2.6": {
+    "tool_accuracy": 0.65,
+    "n_scored_tasks": 20,
+    "completion_rate": 0.8,
+    "avg_steps_on_success": 2.0,
+    "cost_per_success_usd": 0.0026371562499999997,
+    "latency_per_success_s": 8.063157722353935,
+    "n_tasks": 20
+  },
+  "gemma-4-31b-it": {
+    "tool_accuracy": 0.55,
+    "n_scored_tasks": 20,
+    "completion_rate": 0.8,
+    "avg_steps_on_success": 2.0,
+    "cost_per_success_usd": 8.325625000000001e-05,
+    "latency_per_success_s": 3.82843679189682,
+    "n_tasks": 20
+  },
+  "nemotron-3-super-120b-a12b": {
+    "tool_accuracy": 0.0,
+    "n_scored_tasks": 20,
+    "completion_rate": 0.0,
+    "avg_steps_on_success": 0.0,
+    "cost_per_success_usd": Infinity,
+    "latency_per_success_s": Infinity,
+    "n_tasks": 20
+  },
+  "gpt-oss-20b": {
+    "tool_accuracy": 0.45,
+    "n_scored_tasks": 20,
+    "completion_rate": 0.75,
+    "avg_steps_on_success": 2.066666666666667,
+    "cost_per_success_usd": 9.451199999999999e-05,
+    "latency_per_success_s": 1.5361609617869059,
+    "n_tasks": 20
+  },
+  "qwen3.6-35b-a3b": {
+    "tool_accuracy": 0.65,
+    "n_scored_tasks": 20,
+    "completion_rate": 0.85,
+    "avg_steps_on_success": 2.0,
+    "cost_per_success_usd": 0.0037255,
+    "latency_per_success_s": 28.084386601167566,
+    "n_tasks": 20
+  },
+  "glm-5.1": {
+    "tool_accuracy": 0.65,
+    "n_scored_tasks": 20,
+    "completion_rate": 0.8,
+    "avg_steps_on_success": 2.0625,
+    "cost_per_success_usd": 0.0028272625000000003,
+    "latency_per_success_s": 30.2507486641407,
+    "n_tasks": 20
+  },
+  "gpt-5": {
+    "tool_accuracy": 0.45,
+    "n_scored_tasks": 20,
+    "completion_rate": 0.65,
+    "avg_steps_on_success": 2.0,
+    "cost_per_success_usd": 0.006430865384615385,
+    "latency_per_success_s": 12.405090735508846,
+    "n_tasks": 20
+  },
+  "gpt-5-mini": {
+    "tool_accuracy": 0.45,
+    "n_scored_tasks": 20,
+    "completion_rate": 0.6,
+    "avg_steps_on_success": 2.0,
+    "cost_per_success_usd": 0.0009489791666666667,
+    "latency_per_success_s": 13.000244696935018,
+    "n_tasks": 20
+  },
+  "gpt-5-nano": {
+    "tool_accuracy": 0.45,
+    "n_scored_tasks": 20,
+    "completion_rate": 0.65,
+    "avg_steps_on_success": 2.076923076923077,
+    "cost_per_success_usd": 0.0004922076923076923,
+    "latency_per_success_s": 17.86089911827674,
+    "n_tasks": 20
+  },
+  "gpt-4o": {
+    "tool_accuracy": 0.5,
+    "n_scored_tasks": 20,
+    "completion_rate": 0.8,
+    "avg_steps_on_success": 2.0,
+    "cost_per_success_usd": 0.00138140625,
+    "latency_per_success_s": 2.078767940402031,
+    "n_tasks": 20
+  },
+  "gpt-4o-mini": {
+    "tool_accuracy": 0.5,
+    "n_scored_tasks": 20,
+    "completion_rate": 0.8,
+    "avg_steps_on_success": 2.375,
+    "cost_per_success_usd": 0.000103584375,
+    "latency_per_success_s": 3.4748512506484985,
+    "n_tasks": 20
+  },
+  "o4-mini": {
+    "tool_accuracy": 0.5,
+    "n_scored_tasks": 20,
+    "completion_rate": 0.65,
+    "avg_steps_on_success": 2.0,
+    "cost_per_success_usd": 0.0023765923076923077,
+    "latency_per_success_s": 6.504023588620699,
+    "n_tasks": 20
+  }
+}

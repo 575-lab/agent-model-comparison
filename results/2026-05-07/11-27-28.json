@@ -1,0 +1,809 @@
+[
+  {
+    "task_id": "calc-compound",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 0,
+    "input_tokens": 703,
+    "output_tokens": 132,
+    "latency_s": 7.411188125610352,
+    "cost_usd": 0.0016825800000000001,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "1500 * 1.07 ** 5"
+        },
+        "result": "2103.8275960500005"
+      },
+      {
+        "role": "assistant",
+        "content": "The result is **2104** (rounded to the nearest dollar from 2103.83)."
+      }
+    ]
+  },
+  {
+    "task_id": "calc-compound",
+    "model": "kimi-k2.6",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 0,
+    "input_tokens": 392,
+    "output_tokens": 165,
+    "latency_s": 16.25705599784851,
+    "cost_usd": 0.0010324,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "round(1500 * 1.07 ** 5)"
+        },
+        "result": "ERROR: name 'round' is not defined"
+      },
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "1500 * 1.07 ** 5"
+        },
+        "result": "2103.8275960500005"
+      },
+      {
+        "role": "assistant",
+        "content": " 2104"
+      }
+    ]
+  },
+  {
+    "task_id": "flight-cheapest",
+    "model": "deepseek-v4-pro",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 2,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 2,
+    "input_tokens": 1715,
+    "output_tokens": 369,
+    "latency_s": 17.134011030197144,
+    "cost_usd": 0.00426822,
+    "error": null,
+    "trace": [
+      {
+        "tool": "search_flights",
+        "args": {
+          "origin": "SFO",
+          "destination": "JFK",
+          "date": "2026-06-01"
+        },
+        "result": "[{\"flight\": \"AA100\", \"price\": 320, \"depart\": \"08:00\"}, {\"flight\": \"UA250\", \"price\": 410, \"depart\": \"11:30\"}]"
+      },
+      {
+        "tool": "book_flight",
+        "args": {
+          "flight": "AA100"
+        },
+        "result": "{\"status\": \"confirmed\", \"flight\": \"AA100\", \"ref\": \"ABC123\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "Your flight is booked! Here's a summary:\n\n| Detail | Value |\n|---|---|\n| **Flight** | AA100 |\n| **Route** | SFO \u2192 JFK |\n| **Date** | June 1, 2026 |\n| **Departure** | 08:00 |\n| **Price** | $320 |\n| **Status** | Confirmed |\n| **Booking Reference** | **ABC123** |\n\nSafe travels! \u2708\ufe0f"
+      }
+    ]
+  },
+  {
+    "task_id": "flight-cheapest",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 2,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.48224401473999023,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "calc-compound",
+    "model": "nemotron-3-super-120b-a12b",
+    "success": false,
+    "steps": 1,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 0,
+    "tool_calls_scored": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "latency_s": 0.5003550052642822,
+    "cost_usd": 0.0,
+    "error": "PermissionDeniedError: Error code: 403 - {'error': {'message': 'Forbidden', 'type': 'invalid_request_error', 'param': None, 'code': 'forbidden'}}",
+    "trace": []
+  },
+  {
+    "task_id": "flight-cheapest",
+    "model": "gemma-4-31b-it",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 2,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 2,
+    "input_tokens": 792,
+    "output_tokens": 114,
+    "latency_s": 11.46299123764038,
+    "cost_usd": 0.00015648000000000002,
+    "error": null,
+    "trace": [
+      {
+        "tool": "search_flights",
+        "args": {
+          "date": "2026-06-01",
+          "destination": "JFK",
+          "origin": "SFO"
+        },
+        "result": "[{\"flight\": \"AA100\", \"price\": 320, \"depart\": \"08:00\"}, {\"flight\": \"UA250\", \"price\": 410, \"depart\": \"11:30\"}]"
+      },
+      {
+        "tool": "book_flight",
+        "args": {
+          "flight": "AA100"
+        },
+        "result": "{\"status\": \"confirmed\", \"flight\": \"AA100\", \"ref\": \"ABC123\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "The cheapest flight from SFO to JFK on 2026-06-01 was AA100 at $320. I have successfully booked it for you, and your booking reference is ABC123."
+      }
+    ]
+  },
+  {
+    "task_id": "calc-compound",
+    "model": "gpt-oss-20b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 0,
+    "input_tokens": 319,
+    "output_tokens": 92,
+    "latency_s": 6.205905914306641,
+    "cost_usd": 4.036e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "1500 * 1.07 ** 5"
+        },
+        "result": "2103.8275960500005"
+      },
+      {
+        "role": "assistant",
+        "content": "The value is **$2,104** when rounded to the nearest dollar."
+      }
+    ]
+  },
+  {
+    "task_id": "flight-cheapest",
+    "model": "gpt-oss-20b",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 2,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 2,
+    "input_tokens": 794,
+    "output_tokens": 269,
+    "latency_s": 7.2891130447387695,
+    "cost_usd": 0.00011245999999999999,
+    "error": null,
+    "trace": [
+      {
+        "tool": "search_flights",
+        "args": {
+          "date": "2026-06-01",
+          "destination": "JFK",
+          "origin": "SFO"
+        },
+        "result": "[{\"flight\": \"AA100\", \"price\": 320, \"depart\": \"08:00\"}, {\"flight\": \"UA250\", \"price\": 410, \"depart\": \"11:30\"}]"
+      },
+      {
+        "tool": "book_flight",
+        "args": {
+          "flight": "AA100"
+        },
+        "result": "{\"status\": \"confirmed\", \"flight\": \"AA100\", \"ref\": \"ABC123\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "Your flight has been booked!  \n**Booking reference:** ABC123\n\nEnjoy your trip from SFO to JFK on June\u202f1,\u202f2026. If you need anything else, just let me know!"
+      }
+    ]
+  },
+  {
+    "task_id": "flight-cheapest",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 2,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 2,
+    "input_tokens": 1527,
+    "output_tokens": 294,
+    "latency_s": 5.160391092300415,
+    "cost_usd": 0.0009697499999999999,
+    "error": null,
+    "trace": [
+      {
+        "tool": "search_flights",
+        "args": {
+          "origin": "SFO",
+          "destination": "JFK",
+          "date": "2026-06-01"
+        },
+        "result": "[{\"flight\": \"AA100\", \"price\": 320, \"depart\": \"08:00\"}, {\"flight\": \"UA250\", \"price\": 410, \"depart\": \"11:30\"}]"
+      },
+      {
+        "tool": "book_flight",
+        "args": {
+          "flight": "AA100"
+        },
+        "result": "{\"status\": \"confirmed\", \"flight\": \"AA100\", \"ref\": \"ABC123\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "\n\nThe cheapest flight from SFO to JFK on 2026-06-01 is AA100, departing at 08:00 for $320.\n\nYour booking has been confirmed with the reference number: **ABC123**."
+      }
+    ]
+  },
+  {
+    "task_id": "calc-compound",
+    "model": "qwen3.6-35b-a3b",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 0,
+    "input_tokens": 669,
+    "output_tokens": 608,
+    "latency_s": 6.222370624542236,
+    "cost_usd": 0.0013832500000000001,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "1500 * 1.07 ** 5"
+        },
+        "result": "2103.8275960500005"
+      },
+      {
+        "role": "assistant",
+        "content": "2104"
+      }
+    ]
+  },
+  {
+    "task_id": "calc-compound",
+    "model": "gemma-4-31b-it",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 0,
+    "input_tokens": 231,
+    "output_tokens": 58,
+    "latency_s": 16.245314121246338,
+    "cost_usd": 5.554000000000001e-05,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "1500 * 1.07 ** 5"
+        },
+        "result": "2103.8275960500005"
+      },
+      {
+        "role": "assistant",
+        "content": "(1500 * 1.07 ** 5) rounded to the nearest dollar is 2,104."
+      }
+    ]
+  },
+  {
+    "task_id": "calc-compound",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 0,
+    "input_tokens": 409,
+    "output_tokens": 101,
+    "latency_s": 9.431888103485107,
+    "cost_usd": 0.001017,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "1500 * 1.07 ** 5"
+        },
+        "result": "2103.8275960500005"
+      },
+      {
+        "role": "assistant",
+        "content": "The calculation gives approximately **2103.83**. Rounded to the nearest dollar, the answer is **$2,104**."
+      }
+    ]
+  },
+  {
+    "task_id": "flight-cheapest",
+    "model": "glm-5.1",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 2,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 2,
+    "input_tokens": 1155,
+    "output_tokens": 259,
+    "latency_s": 18.26852011680603,
+    "cost_usd": 0.0027566,
+    "error": null,
+    "trace": [
+      {
+        "tool": "search_flights",
+        "args": {
+          "origin": "SFO",
+          "destination": "JFK",
+          "date": "2026-06-01"
+        },
+        "result": "[{\"flight\": \"AA100\", \"price\": 320, \"depart\": \"08:00\"}, {\"flight\": \"UA250\", \"price\": 410, \"depart\": \"11:30\"}]"
+      },
+      {
+        "tool": "book_flight",
+        "args": {
+          "flight": "AA100"
+        },
+        "result": "{\"status\": \"confirmed\", \"flight\": \"AA100\", \"ref\": \"ABC123\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "All done! Here's a summary:\n\n- **Flight:** AA100\n- **Route:** SFO \u2192 JFK\n- **Date:** 2026-06-01\n- **Departure:** 08:00\n- **Price:** $320\n- **Booking Reference:** **ABC123**\n\nYour flight is confirmed! Keep the booking reference **ABC123** for your records."
+      }
+    ]
+  },
+  {
+    "task_id": "flight-cheapest",
+    "model": "kimi-k2.6",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 2,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 2,
+    "input_tokens": 641,
+    "output_tokens": 337,
+    "latency_s": 50.121609926223755,
+    "cost_usd": 0.00195695,
+    "error": null,
+    "trace": [
+      {
+        "tool": "search_flights",
+        "args": {
+          "origin": "SFO",
+          "destination": "JFK",
+          "date": "2026-06-01"
+        },
+        "result": "[{\"flight\": \"AA100\", \"price\": 320, \"depart\": \"08:00\"}, {\"flight\": \"UA250\", \"price\": 410, \"depart\": \"11:30\"}]"
+      },
+      {
+        "tool": "book_flight",
+        "args": {
+          "flight": "AA100"
+        },
+        "result": "{\"status\": \"confirmed\", \"flight\": \"AA100\", \"ref\": \"ABC123\"}"
+      },
+      {
+        "role": "assistant",
+        "content": " I found two flights from SFO to JFK on June 1, 2026:\n\n- **AA100** \u2014 $320, departing 08:00  \n- **UA250** \u2014 $410, departing 11:30  \n\nI booked the cheapest one, **AA100**, for you.  \n**Booking reference: ABC123**"
+      }
+    ]
+  },
+  {
+    "task_id": "calc-compound",
+    "model": "gpt-5-mini",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 0,
+    "input_tokens": 348,
+    "output_tokens": 45,
+    "latency_s": 2.904709815979004,
+    "cost_usd": 0.00017700000000000002,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "1500 * 1.07 ** 5"
+        },
+        "result": "2103.8275960500005"
+      },
+      {
+        "role": "assistant",
+        "content": "$2,104"
+      }
+    ]
+  },
+  {
+    "task_id": "flight-cheapest",
+    "model": "gpt-5",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 2,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 2,
+    "input_tokens": 814,
+    "output_tokens": 389,
+    "latency_s": 21.440669059753418,
+    "cost_usd": 0.0049074999999999995,
+    "error": null,
+    "trace": [
+      {
+        "tool": "search_flights",
+        "args": {
+          "origin": "SFO",
+          "destination": "JFK",
+          "date": "2026-06-01"
+        },
+        "result": "[{\"flight\": \"AA100\", \"price\": 320, \"depart\": \"08:00\"}, {\"flight\": \"UA250\", \"price\": 410, \"depart\": \"11:30\"}]"
+      },
+      {
+        "tool": "book_flight",
+        "args": {
+          "flight": "AA100"
+        },
+        "result": "{\"status\": \"confirmed\", \"flight\": \"AA100\", \"ref\": \"ABC123\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "Success! I found two flights and booked the cheapest one.\n\nFlights found for 2026-06-01, SFO \u2192 JFK:\n- AA100: $320, departs 08:00\n- UA250: $410, departs 11:30\n\nBooked: AA100\nBooking reference: ABC123"
+      }
+    ]
+  },
+  {
+    "task_id": "flight-cheapest",
+    "model": "gpt-5-nano",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 2,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 2,
+    "input_tokens": 814,
+    "output_tokens": 296,
+    "latency_s": 7.333301067352295,
+    "cost_usd": 0.00015910000000000002,
+    "error": null,
+    "trace": [
+      {
+        "tool": "search_flights",
+        "args": {
+          "origin": "SFO",
+          "destination": "JFK",
+          "date": "2026-06-01"
+        },
+        "result": "[{\"flight\": \"AA100\", \"price\": 320, \"depart\": \"08:00\"}, {\"flight\": \"UA250\", \"price\": 410, \"depart\": \"11:30\"}]"
+      },
+      {
+        "tool": "book_flight",
+        "args": {
+          "flight": "AA100"
+        },
+        "result": "{\"status\": \"confirmed\", \"flight\": \"AA100\", \"ref\": \"ABC123\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "Flight booked successfully.\n- Flight: AA100\n- Booking reference: ABC123\n\nWould you like me to add this trip to your calendar or set a reminder for check-in times?"
+      }
+    ]
+  },
+  {
+    "task_id": "calc-compound",
+    "model": "gpt-5-nano",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 0,
+    "input_tokens": 348,
+    "output_tokens": 568,
+    "latency_s": 6.4105939865112305,
+    "cost_usd": 0.00024460000000000004,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "1500 * 1.07 ** 5"
+        },
+        "result": "2103.8275960500005"
+      },
+      {
+        "role": "assistant",
+        "content": "The result is 2103.8275960500005, which rounds to 2104 dollars."
+      }
+    ]
+  },
+  {
+    "task_id": "flight-cheapest",
+    "model": "gpt-4o",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 2,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 2,
+    "input_tokens": 553,
+    "output_tokens": 76,
+    "latency_s": 2.2858309745788574,
+    "cost_usd": 0.0021425000000000003,
+    "error": null,
+    "trace": [
+      {
+        "tool": "search_flights",
+        "args": {
+          "origin": "SFO",
+          "destination": "JFK",
+          "date": "2026-06-01"
+        },
+        "result": "[{\"flight\": \"AA100\", \"price\": 320, \"depart\": \"08:00\"}, {\"flight\": \"UA250\", \"price\": 410, \"depart\": \"11:30\"}]"
+      },
+      {
+        "tool": "book_flight",
+        "args": {
+          "flight": "AA100"
+        },
+        "result": "{\"status\": \"confirmed\", \"flight\": \"AA100\", \"ref\": \"ABC123\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "The cheapest flight from SFO to JFK on 2026-06-01 has been booked. Your booking reference is **ABC123**."
+      }
+    ]
+  },
+  {
+    "task_id": "flight-cheapest",
+    "model": "gpt-5-mini",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 2,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 2,
+    "input_tokens": 814,
+    "output_tokens": 664,
+    "latency_s": 14.221949815750122,
+    "cost_usd": 0.0015314999999999999,
+    "error": null,
+    "trace": [
+      {
+        "tool": "search_flights",
+        "args": {
+          "origin": "SFO",
+          "destination": "JFK",
+          "date": "2026-06-01"
+        },
+        "result": "[{\"flight\": \"AA100\", \"price\": 320, \"depart\": \"08:00\"}, {\"flight\": \"UA250\", \"price\": 410, \"depart\": \"11:30\"}]"
+      },
+      {
+        "tool": "book_flight",
+        "args": {
+          "flight": "AA100"
+        },
+        "result": "{\"status\": \"confirmed\", \"flight\": \"AA100\", \"ref\": \"ABC123\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "Done \u2014 I found flights and booked the cheapest one.\n\n- Flight: AA100 (SFO \u2192 JFK)\n- Departure: 08:00 on 2026-06-01\n- Price: $320\n- Booking reference: ABC123\n- Status: Confirmed\n\nWould you like me to email or text the itinerary, add baggage, pick seats, or make any changes?"
+      }
+    ]
+  },
+  {
+    "task_id": "calc-compound",
+    "model": "gpt-4o",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 0,
+    "input_tokens": 335,
+    "output_tokens": 87,
+    "latency_s": 2.4006969928741455,
+    "cost_usd": 0.0017075,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "round(1500 * 1.07 ** 5)"
+        },
+        "result": "ERROR: name 'round' is not defined"
+      },
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "1500 * 1.07 ** 5"
+        },
+        "result": "2103.8275960500005"
+      },
+      {
+        "role": "assistant",
+        "content": "The result of \\(1500 \\times 1.07^5\\) is approximately 2103.83, which rounds to 2104 when rounded to the nearest dollar."
+      }
+    ]
+  },
+  {
+    "task_id": "calc-compound",
+    "model": "gpt-4o-mini",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 0,
+    "input_tokens": 335,
+    "output_tokens": 90,
+    "latency_s": 2.7250030040740967,
+    "cost_usd": 0.00010425,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "round(1500 * 1.07 ** 5)"
+        },
+        "result": "ERROR: name 'round' is not defined"
+      },
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "1500 * 1.07 ** 5"
+        },
+        "result": "2103.8275960500005"
+      },
+      {
+        "role": "assistant",
+        "content": "The result of the expression \\( 1500 \\times 1.07^5 \\) is approximately 2103.83. When rounded to the nearest dollar, it is $2104."
+      }
+    ]
+  },
+  {
+    "task_id": "flight-cheapest",
+    "model": "gpt-4o-mini",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 2,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 2,
+    "input_tokens": 553,
+    "output_tokens": 94,
+    "latency_s": 4.287286043167114,
+    "cost_usd": 0.00013935,
+    "error": null,
+    "trace": [
+      {
+        "tool": "search_flights",
+        "args": {
+          "origin": "SFO",
+          "destination": "JFK",
+          "date": "2026-06-01"
+        },
+        "result": "[{\"flight\": \"AA100\", \"price\": 320, \"depart\": \"08:00\"}, {\"flight\": \"UA250\", \"price\": 410, \"depart\": \"11:30\"}]"
+      },
+      {
+        "tool": "book_flight",
+        "args": {
+          "flight": "AA100"
+        },
+        "result": "{\"status\": \"confirmed\", \"flight\": \"AA100\", \"ref\": \"ABC123\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "I found a flight from SFO to JFK on 2026-06-01. The cheapest option is flight AA100, which costs $320. The booking has been confirmed, and your booking reference is **ABC123**."
+      }
+    ]
+  },
+  {
+    "task_id": "flight-cheapest",
+    "model": "o4-mini",
+    "success": true,
+    "steps": 3,
+    "tool_calls_correct": 2,
+    "tool_calls_total": 2,
+    "tool_calls_scored": 2,
+    "input_tokens": 571,
+    "output_tokens": 306,
+    "latency_s": 5.886476039886475,
+    "cost_usd": 0.0019745,
+    "error": null,
+    "trace": [
+      {
+        "tool": "search_flights",
+        "args": {
+          "origin": "SFO",
+          "destination": "JFK",
+          "date": "2026-06-01"
+        },
+        "result": "[{\"flight\": \"AA100\", \"price\": 320, \"depart\": \"08:00\"}, {\"flight\": \"UA250\", \"price\": 410, \"depart\": \"11:30\"}]"
+      },
+      {
+        "tool": "book_flight",
+        "args": {
+          "flight": "AA100"
+        },
+        "result": "{\"status\": \"confirmed\", \"flight\": \"AA100\", \"ref\": \"ABC123\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "Your flight has been successfully booked!\n\nFlight: AA100  \nDeparture: 08:00 from SFO to JFK  \nPrice: $320  \nBooking Reference: ABC123  \n\nSafe travels!"
+      }
+    ]
+  },
+  {
+    "task_id": "calc-compound",
+    "model": "o4-mini",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 0,
+    "input_tokens": 186,
+    "output_tokens": 332,
+    "latency_s": 4.780900001525879,
+    "cost_usd": 0.0016654000000000003,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "1500 * 1.07 ** 5"
+        },
+        "result": "2103.8275960500005"
+      },
+      {
+        "role": "assistant",
+        "content": "The value of \\(1500 \\times 1.07^5\\) rounded to the nearest dollar is 2104."
+      }
+    ]
+  },
+  {
+    "task_id": "calc-compound",
+    "model": "gpt-5",
+    "success": true,
+    "steps": 2,
+    "tool_calls_correct": 0,
+    "tool_calls_total": 1,
+    "tool_calls_scored": 0,
+    "input_tokens": 348,
+    "output_tokens": 871,
+    "latency_s": 33.0467791557312,
+    "cost_usd": 0.009145,
+    "error": null,
+    "trace": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "1500 * 1.07 ** 5"
+        },
+        "result": "2103.8275960500005"
+      },
+      {
+        "role": "assistant",
+        "content": "$2,104"
+      }
+    ]
+  }
+]
